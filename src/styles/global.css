@@ -1,0 +1,102 @@
+:root {
+  --color-ink: #152238;
+  --color-muted: #61708a;
+  --color-surface: #f7f9fc;
+  --color-panel: #ffffff;
+  --color-line: #dfe6ef;
+  --color-accent: #2563eb;
+  --color-accent-soft: #dbeafe;
+  --content-width: 72rem;
+  --article-width: 44rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --radius: 0.75rem;
+  font-family:
+    Inter, Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", system-ui,
+    sans-serif;
+  color: var(--color-ink);
+  background: var(--color-surface);
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 20rem;
+  margin: 0;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.page-shell {
+  width: min(100% - 2rem, var(--content-width));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  margin: 0;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .page-shell {
+    width: min(100% - 3rem, var(--content-width));
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-shell {
+    width: min(100% - 4rem, var(--content-width));
+  }
+}
