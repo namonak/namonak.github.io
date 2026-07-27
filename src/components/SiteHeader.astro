@@ -1,0 +1,75 @@
+---
+const navigation = [
+  { href: "/", label: "글" },
+  { href: "/categories/", label: "카테고리" },
+  { href: "/about/", label: "소개" },
+];
+---
+
+<header class="site-header">
+  <div class="page-shell header-inner">
+    <a class="brand" href="/">namonak.dev</a>
+    <nav aria-label="주요 탐색">
+      <ul>
+        {
+          navigation.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--color-line);
+    background: color-mix(in srgb, var(--color-panel) 92%, transparent);
+  }
+
+  .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3) var(--space-5);
+    min-height: 4.5rem;
+    padding-block: var(--space-3);
+  }
+
+  .brand {
+    color: var(--color-ink);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav a {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    font-weight: 650;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 767px) {
+    .header-inner {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="page-shell footer-inner">
+    <p>© {year} namonak.dev</p>
+    <a href="/">글 목록으로</a>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--space-7);
+    border-top: 1px solid var(--color-line);
+    color: var(--color-muted);
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding-block: var(--space-5);
+    font-size: 0.85rem;
+  }
+
+  p {
+    margin: 0;
+  }
+</style>
