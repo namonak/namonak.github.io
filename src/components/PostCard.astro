@@ -1,0 +1,88 @@
+---
+interface Props {
+  title: string;
+  href: string;
+  publishedAt: Date;
+  category: string;
+  description: string;
+  tags: string[];
+}
+
+const { title, href, publishedAt, category, description, tags } = Astro.props;
+const formattedDate = new Intl.DateTimeFormat("ko-KR", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+}).format(publishedAt);
+---
+
+<article class="post-card">
+  <div class="meta">
+    <span>{category}</span>
+    <time datetime={publishedAt.toISOString()}>{formattedDate}</time>
+  </div>
+  <h3><a href={href}>{title}</a></h3>
+  <p class="description">{description}</p>
+  {
+    tags.length > 0 && (
+      <ul class="tags" aria-label={`${title} 태그`}>
+        {tags.map((tag) => <li>{tag}</li>)}
+      </ul>
+    )
+  }
+</article>
+
+<style>
+  .post-card {
+    padding-block: var(--space-5);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .meta,
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+    color: var(--color-muted);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    list-style: none;
+  }
+
+  .meta span {
+    color: var(--color-accent);
+    text-transform: uppercase;
+  }
+
+  h3 {
+    margin: var(--space-2) 0;
+    font-size: clamp(1.25rem, 2vw, 1.55rem);
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+  }
+
+  h3 a {
+    text-decoration: none;
+  }
+
+  .description {
+    max-width: 42rem;
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+  }
+
+  .tags {
+    margin-top: var(--space-3);
+  }
+
+  .tags li {
+    padding: 0.1rem 0.45rem;
+    border-radius: 999px;
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+  }
+</style>
