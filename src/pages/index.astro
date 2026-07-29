@@ -1,5 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import PostCard from "../components/PostCard.astro";
+import { getPublishedPosts } from "../lib/posts";
+
+const posts = getPublishedPosts(await getCollection("blog"));
+const categories = [...new Set(posts.map((post) => post.data.category))].sort();
 ---
 
 <BaseLayout
@@ -19,8 +25,32 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <section class="latest-posts" aria-labelledby="latest-posts">
       <div class="section-intro">
         <h2 class="section-heading" id="latest-posts">최신 글</h2>
-        <p>대표 글을 준비하고 있습니다.</p>
+        <p>{posts.length === 0 ? "대표 글을 준비하고 있습니다." : `${posts.length}개의 글`}</p>
       </div>
+      {
+        posts.length > 0 && (
+          <div class="post-grid">
+            <div>
+              {posts.map((post) => (
+                <PostCard
+                  title={post.data.title}
+                  href={`/${post.id}/`}
+                  publishedAt={post.data.publishedAt}
+                  category={post.data.category}
+                  description={post.data.description}
+                  tags={post.data.tags}
+                />
+              ))}
+            </div>
+            <aside aria-label="카테고리">
+              <p class="eyebrow">Categories</p>
+              <ul>
+                {categories.map((category) => <li>{category}</li>)}
+              </ul>
+            </aside>
+          </div>
+        )
+      }
     </section>
   </div>
 </BaseLayout>
@@ -67,5 +97,42 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     margin: 0;
     color: var(--color-muted);
     font-size: 0.9rem;
+  }
+
+  .post-grid {
+    display: grid;
+    gap: var(--space-6);
+    margin-top: var(--space-4);
+  }
+
+  aside {
+    display: none;
+    padding: var(--space-4);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius);
+    background: var(--color-panel);
+  }
+
+  aside ul {
+    display: grid;
+    gap: var(--space-2);
+    margin: var(--space-3) 0 0;
+    padding: 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    list-style: none;
+  }
+
+  @media (min-width: 1024px) {
+    .post-grid {
+      grid-template-columns: minmax(0, 1fr) 13rem;
+    }
+
+    aside {
+      display: block;
+      align-self: start;
+      position: sticky;
+      top: var(--space-5);
+    }
   }
 </style>
