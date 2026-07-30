@@ -160,6 +160,13 @@ a:hover {
   font-weight: 750;
 }
 
+.prose svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: var(--space-5) auto;
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .page-shell {
     width: min(100% - 3rem, var(--content-width));

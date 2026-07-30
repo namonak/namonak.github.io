@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import { unified } from "@astrojs/markdown-remark";
+import rehypeMermaid from "rehype-mermaid";
 import remarkGfm from "remark-gfm";
 
 export default defineConfig({
@@ -7,6 +8,9 @@ export default defineConfig({
   output: "static",
   trailingSlash: "always",
   markdown: {
-    processor: unified({ remarkPlugins: [remarkGfm] }),
+    processor: unified({
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [rehypeMermaid],
+    }),
   },
 });
