@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+import PostCard from "../../components/PostCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPostsByTag, getPublishedPosts } from "../../lib/posts";
+
+export async function getStaticPaths() {
+  const posts = getPublishedPosts(await getCollection("blog"));
+  const tags = [...new Set(posts.flatMap((post) => post.data.tags))].sort();
+  return tags.map((tag) => ({ params: { tag: encodeURIComponent(tag) }, props: { tag, posts: getPostsByTag(posts, tag) } }));
+}
+
+const { tag, posts } = Astro.props;
+---
+<BaseLayout title={`태그: ${tag} — namonak.dev`} description={`${tag} 태그가 달린 글 목록입니다.`}>
+  <section class="page-shell archive"><p class="eyebrow">Tag</p><h1>태그: {tag}</h1>{posts.length > 0 ? posts.map((post) => <PostCard title={post.data.title} href={`/${post.id}/`} publishedAt={post.data.publishedAt} category={post.data.category} description={post.data.description} tags={post.data.tags} />) : <p>이 태그의 글이 없습니다.</p>}</section>
+</BaseLayout>
+<style>.archive { padding-block: clamp(3rem, 8vw, 6rem); } h1 { letter-spacing: -.05em; }</style>
