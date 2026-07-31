@@ -1,0 +1,57 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+interface AdjacentPost {
+  id: string;
+  data: { title: string };
+}
+
+interface Props {
+  title: string;
+  description: string;
+  category: string;
+  tags: string[];
+  publishedAt: Date;
+  updatedAt?: Date;
+  previous: AdjacentPost | null;
+  next: AdjacentPost | null;
+}
+
+const { title, description, category, tags, publishedAt, updatedAt, previous, next } = Astro.props;
+const formatDate = (date: Date) =>
+  new Intl.DateTimeFormat("ko-KR", { year: "numeric", month: "long", day: "numeric" }).format(date);
+---
+
+<BaseLayout title={`${title} — namonak.dev`} description={description}>
+  <article class="page-shell article">
+    <header>
+      <a class="category" href={`/categories/${category}/`}>{category}</a>
+      <h1>{title}</h1>
+      <p class="description">{description}</p>
+      <p class="dates">
+        <time datetime={publishedAt.toISOString()}>게시 {formatDate(publishedAt)}</time>
+        {updatedAt && <time datetime={updatedAt.toISOString()}>수정 {formatDate(updatedAt)}</time>}
+      </p>
+    </header>
+    <div class="prose"><slot /></div>
+    {tags.length > 0 && <ul class="tags">{tags.map((tag) => <li><a href={`/tags/${encodeURIComponent(tag)}/`}>#{tag}</a></li>)}</ul>}
+    <nav class="adjacent" aria-label="인접 글">
+      {previous ? <a href={`/${previous.id}/`}>← {previous.data.title}</a> : <span />}
+      {next ? <a href={`/${next.id}/`}>{next.data.title} →</a> : <span />}
+    </nav>
+  </article>
+</BaseLayout>
+
+<style>
+  .article { padding-block: clamp(3rem, 8vw, 6rem); }
+  header { max-width: var(--article-width); margin-bottom: var(--space-7); }
+  .category { color: var(--color-accent); font-size: .85rem; font-weight: 750; text-decoration: none; text-transform: uppercase; }
+  h1 { margin: var(--space-2) 0 var(--space-4); font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.16; letter-spacing: -.055em; }
+  .description, .dates { color: var(--color-muted); }
+  .description { margin: 0; font-size: 1.08rem; }
+  .dates { display: flex; gap: var(--space-3); margin: var(--space-4) 0 0; font-size: .85rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: var(--space-2); max-width: var(--article-width); margin: var(--space-6) 0 0; padding: 0; list-style: none; }
+  .tags a { color: var(--color-accent); font-size: .85rem; }
+  .adjacent { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); max-width: var(--article-width); margin-top: var(--space-7); padding-top: var(--space-5); border-top: 1px solid var(--color-line); }
+  .adjacent a:last-child { text-align: right; }
+</style>
