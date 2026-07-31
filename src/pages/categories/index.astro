@@ -1,0 +1,11 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublishedPosts } from "../../lib/posts";
+
+const categories = [...new Set(getPublishedPosts(await getCollection("blog")).map((post) => post.data.category))].sort();
+---
+<BaseLayout title="카테고리 — namonak.dev" description="개발 주제별 글 목록입니다.">
+  <section class="page-shell archive"><p class="eyebrow">Topics</p><h1>카테고리</h1><ul>{categories.map((category) => <li><a href={`/categories/${category}/`}>{category}</a></li>)}</ul></section>
+</BaseLayout>
+<style>.archive { padding-block: clamp(3rem, 8vw, 6rem); } h1 { letter-spacing: -.05em; } ul { display: grid; gap: var(--space-3); padding: 0; list-style: none; } a { color: var(--color-accent); font-weight: 700; }</style>

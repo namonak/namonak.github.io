@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostCard from "../../components/PostCard.astro";
+import { getPostsByCategory, getPublishedPosts } from "../../lib/posts";
+
+export async function getStaticPaths() {
+  const posts = getPublishedPosts(await getCollection("blog"));
+  return [...new Set(posts.map((post) => post.data.category))].sort().map((category) => ({ params: { category }, props: { posts: getPostsByCategory(posts, category) } }));
+}
+const { posts } = Astro.props;
+const category = Astro.params.category ?? "";
+---
+<BaseLayout title={`${category} — namonak.dev`} description={`${category} 카테고리 글 목록입니다.`}>
+  <section class="page-shell archive"><p class="eyebrow">Category</p><h1>{category}</h1>{posts.map((post) => <PostCard title={post.data.title} href={`/${post.id}/`} publishedAt={post.data.publishedAt} category={post.data.category} description={post.data.description} tags={post.data.tags} />)}</section>
+</BaseLayout>
+<style>.archive { padding-block: clamp(3rem, 8vw, 6rem); } h1 { letter-spacing: -.05em; }</style>
