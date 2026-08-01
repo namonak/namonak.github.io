@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-labelledby="title desc">
+  <title id="title">Coroutine cancellation flow</title>
+  <desc id="desc">A request starts, receives a cancellation signal, and finishes cleanup.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb" /></marker></defs>
+  <rect width="720" height="220" rx="20" fill="#f7f9fc" />
+  <g font-family="system-ui, sans-serif" text-anchor="middle"><g fill="#fff" stroke="#2563eb" stroke-width="2"><rect x="45" y="80" width="150" height="60" rx="12" /><rect x="285" y="80" width="150" height="60" rx="12" /><rect x="525" y="80" width="150" height="60" rx="12" /></g><g fill="#152238" font-size="16" font-weight="700"><text x="120" y="116">Request starts</text><text x="360" y="116">Cancellation</text><text x="600" y="116">Cleanup</text></g><g stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"><path d="M195 110 H270" /><path d="M435 110 H510" /></g><text x="360" y="55" fill="#61708a" font-size="14">structured concurrency</text></g>
+</svg>
