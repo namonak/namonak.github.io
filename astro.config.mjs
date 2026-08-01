@@ -8,6 +8,10 @@ export default defineConfig({
   output: "static",
   trailingSlash: "always",
   markdown: {
+    syntaxHighlight: {
+      type: "shiki",
+      excludeLangs: ["mermaid"],
+    },
     processor: unified({
       remarkPlugins: [remarkGfm],
       rehypePlugins: [rehypeMermaid],
