@@ -1,0 +1,7 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="페이지를 찾을 수 없습니다 — namonak.dev" description="요청한 페이지를 찾을 수 없습니다.">
+  <section class="page-shell not-found"><p class="eyebrow">404</p><h1>페이지를 찾을 수 없습니다.</h1><p>주소가 바뀌었거나 아직 공개되지 않은 글일 수 있습니다.</p><a href="/">글 목록으로 돌아가기</a></section>
+</BaseLayout>
+<style>.not-found { padding-block: clamp(4rem, 12vw, 9rem); } h1 { letter-spacing: -.05em; } p { color: var(--color-muted); } a { color: var(--color-accent); font-weight: 750; }</style>
