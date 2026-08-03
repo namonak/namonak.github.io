@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "check": "astro check",
     "build": "astro build",
-    "test": "vitest run",
+    "test": "vitest run tests",
     "test:e2e": "playwright test",
     "format:check": "prettier --check ."
   },
