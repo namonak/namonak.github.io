@@ -33,7 +33,7 @@ Only entries with `draft: false` or no `draft` field become public pages. The ca
 
 - `remark-gfm` renders tables, task lists, and other GitHub-flavored Markdown.
 - Astro's built-in Shiki highlighting renders fenced code blocks.
-- `rehype-mermaid` converts Mermaid fences to inline SVG during the build. Invalid diagrams must stop validation or the build.
+- `rehype-mermaid` converts Mermaid fences to inline SVG during the build. `npm run validate:mermaid` directly invokes the same renderer for each Markdown Mermaid fence, so invalid diagrams stop CI before the static build.
 - Images live in `public/images/` and are referenced with root-relative paths in Markdown.
 - No comment system, client-side search, or WordPress runtime is part of this architecture.
 

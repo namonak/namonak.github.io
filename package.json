@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "check": "astro check",
     "build": "astro build",
+    "validate:mermaid": "node scripts/validate-mermaid.mjs",
     "test": "vitest run tests",
     "test:e2e": "playwright test",
     "format:check": "prettier --check ."
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@playwright/test": "^1.62.1",
     "prettier": "^3.9.6",
+    "rehype": "^13.0.2",
     "typescript": "^6.0.3",
     "vitest": "^4.1.10"
   }
