@@ -14,7 +14,7 @@
 - Already migrated WordPress posts: `WP#859`, `WP#810`, `WP#848`, and `WP#902`; migrate the remaining 76 posts only.
 - Schedule work from 2026-08-10 through 2026-09-08: two articles per weekday and four articles per Saturday or Sunday.
 - Use the dates below as planned work dates. Never backdate a commit; use the actual local completion time.
-- Create exactly one meaningful signed commit per article. Include that article, only its required assets, and its single completed checkbox in the same commit.
+- Create exactly one meaningful signed commit per article, except for the user-approved `WP#969`, `WP#966`, `WP#958`, `WP#952`, `WP#948`, and `WP#939` English batch migrated together on 2026-08-09. Include each article, only its required assets, and its completed checkbox in the applicable commit.
 - Stop immediately if Git requests a signing passphrase; never request or enter it.
 - Preserve each source post's original publication date in `publishedAt`; use `updatedAt` only when the migrated article receives a substantive correction.
 - Publish each article at `/{category}/{slug}/`; choose a lowercase route-safe category and a concise stable slug before the first commit, then do not rename a published route casually.
@@ -50,7 +50,7 @@ The four completed migrations are recorded here only to make the subtraction aud
 | `docs/content-guide.md`                                         | Required frontmatter, authoring rules, image policy, and Mermaid syntax |
 | `ARCHITECTURE.md`                                               | Content flow, route ownership, and deployment behavior                  |
 
-## Schedule summary
+## Original schedule summary
 
 | Week | Planned dates         | Weekdays | Weekend | Articles | Cumulative |
 | ---- | --------------------- | -------: | ------: | -------: | ---------: |
@@ -60,11 +60,11 @@ The four completed migrations are recorded here only to make the subtraction aud
 | 4    | 2026-08-31–2026-09-06 |       10 |       8 |       18 |         72 |
 | 5    | 2026-09-07–2026-09-08 |        4 |       0 |        4 |         76 |
 
-This produces 76 article commits over 30 consecutive calendar days. Push once at the end of each completed daily batch, for at most 30 deployment-triggering pushes.
+The original allocation covered 76 migrations over 30 consecutive calendar days. The six English articles originally assigned to 2026-08-10 through 2026-08-12 were completed early on 2026-08-09 in one approved exception commit, leaving 70 individual article migrations. The remaining date allocation will be rebaselined in a separate plan revision.
 
 ## Per-article execution protocol
 
-Apply all steps below to each schedule checkbox. The checkbox itself is the durable progress record.
+Apply all steps below to each remaining unchecked schedule item. The checkbox itself is the durable progress record. The six-item English batch is the only approved exception to the one-article-per-commit rule.
 
 1. **Step 1: Synchronize before editing**
 
@@ -124,20 +124,22 @@ If a planned day is missed, leave its checkboxes unchecked and process those art
 
 ## Migration calendar
 
+> Early completion: `WP#969`, `WP#966`, `WP#958`, `WP#952`, `WP#948`, and `WP#939` were migrated together on 2026-08-09. Their original date headings remain visible until the 70-item remainder is rebaselined.
+
 ### 2026-08-10 (월) — 2개
 
-- [ ] `WP#969` · 원문 2026-05-27 · **run 구동사 정리: run out, run into 뜻과 예문** · [원문](https://blog.joannes.kr/english/run-phrasal-verbs/)
-- [ ] `WP#966` · 원문 2026-05-20 · **get 구동사 정리: get over, get down, get by, get at 뜻과 예문** · [원문](https://blog.joannes.kr/english/get-phrasal-verbs/)
+- [x] `WP#969` · 원문 2026-05-27 · **run 구동사 정리: run out, run into 뜻과 예문** · [원문](https://blog.joannes.kr/english/run-phrasal-verbs/)
+- [x] `WP#966` · 원문 2026-05-20 · **get 구동사 정리: get over, get down, get by, get at 뜻과 예문** · [원문](https://blog.joannes.kr/english/get-phrasal-verbs/)
 
 ### 2026-08-11 (화) — 2개
 
-- [ ] `WP#958` · 원문 2026-05-13 · **take 구동사 정리: take up, take out, take off, take over 뜻과 예문** · [원문](https://blog.joannes.kr/english/take-phrasal-verbs/)
-- [ ] `WP#952` · 원문 2026-05-06 · **make 구동사 정리: make up, make out, make of 뜻과 예문** · [원문](https://blog.joannes.kr/english/make-phrasal-verbs/)
+- [x] `WP#958` · 원문 2026-05-13 · **take 구동사 정리: take up, take out, take off, take over 뜻과 예문** · [원문](https://blog.joannes.kr/english/take-phrasal-verbs/)
+- [x] `WP#952` · 원문 2026-05-06 · **make 구동사 정리: make up, make out, make of 뜻과 예문** · [원문](https://blog.joannes.kr/english/make-phrasal-verbs/)
 
 ### 2026-08-12 (수) — 2개
 
-- [ ] `WP#948` · 원문 2026-05-04 · **pick up 뜻과 예문 정리: 줍다, 데리러 가다, 배우다** · [원문](https://blog.joannes.kr/english/pick-up-phrasal-verb/)
-- [ ] `WP#939` · 원문 2026-05-04 · **구동사(Phrasal Verbs)란? 기본 개념과 공부법** · [원문](https://blog.joannes.kr/english/%ec%98%81%ec%96%b4-%ea%b5%ac%eb%8f%99%ec%82%ac%eb%9e%80-%ea%b8%b0%eb%b3%b8-%ea%b0%9c%eb%85%90%ea%b3%bc-%ea%b3%b5%eb%b6%80%eb%b2%95/)
+- [x] `WP#948` · 원문 2026-05-04 · **pick up 뜻과 예문 정리: 줍다, 데리러 가다, 배우다** · [원문](https://blog.joannes.kr/english/pick-up-phrasal-verb/)
+- [x] `WP#939` · 원문 2026-05-04 · **구동사(Phrasal Verbs)란? 기본 개념과 공부법** · [원문](https://blog.joannes.kr/english/%ec%98%81%ec%96%b4-%ea%b5%ac%eb%8f%99%ec%82%ac%eb%9e%80-%ea%b8%b0%eb%b3%b8-%ea%b0%9c%eb%85%90%ea%b3%bc-%ea%b3%b5%eb%b6%80%eb%b2%95/)
 
 ### 2026-08-13 (목) — 2개
 
