@@ -6,7 +6,7 @@ category: "network"
 tags: ["network", "mtu", "mss", "tcp"]
 ---
 
-네트워크를 통과하는 데이터는 링크가 받아들일 수 있는 크기로 나뉩니다. 이때 링크 계층에서 한 번에 실을 수 있는 최대 IP 패킷 크기가 **MTU(Maximum Transmission Unit)**이고, TCP가 한 세그먼트에 담는 애플리케이션 데이터의 최대 크기가 **MSS(Maximum Segment Size)**입니다.
+네트워크를 통과하는 데이터는 링크가 받아들일 수 있는 크기로 나뉩니다. 이때 링크 계층에서 한 번에 실을 수 있는 최대 IP 패킷 크기가 **MTU**(Maximum Transmission Unit)이고, TCP가 한 세그먼트에 담는 애플리케이션 데이터의 최대 크기가 **MSS**(Maximum Segment Size)입니다.
 
 ## MTU란?
 
