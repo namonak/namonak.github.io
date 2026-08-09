@@ -91,6 +91,7 @@ a:hover {
 
 .prose {
   max-width: var(--article-width);
+  overflow-wrap: anywhere;
 }
 
 .prose > :first-child {

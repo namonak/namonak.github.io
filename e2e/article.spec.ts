@@ -20,6 +20,45 @@ test("mobile article keeps rendered diagrams within its content box", async ({
   );
 });
 
+test("long prose strings wrap without widening the document", async ({
+  page,
+}) => {
+  await page.goto("/web/markdown-mermaid-rendering/");
+  const prose = page.locator(".prose");
+
+  await prose.evaluate((element) => {
+    const rawUrl = document.createElement("p");
+    rawUrl.textContent = `https://example.com/${"unbroken".repeat(48)}`;
+
+    const inlineCodeParagraph = document.createElement("p");
+    const inlineCode = document.createElement("code");
+    inlineCode.textContent = `VeryLongIdentifier${"Segment".repeat(48)}`;
+    inlineCodeParagraph.append(inlineCode);
+
+    const pre = document.createElement("pre");
+    const code = document.createElement("code");
+    code.textContent = `const ${"longIdentifier".repeat(48)} = true;`;
+    pre.append(code);
+
+    element.append(rawUrl, inlineCodeParagraph, pre);
+  });
+
+  expect(
+    await page.evaluate(
+      () =>
+        document.documentElement.scrollWidth -
+        document.documentElement.clientWidth,
+    ),
+  ).toBe(0);
+
+  const injectedPre = prose.locator("pre").last();
+  expect(
+    await injectedPre.evaluate(
+      (element) => element.scrollWidth > element.clientWidth,
+    ),
+  ).toBe(true);
+});
+
 test("article tables stay contained and scroll on mobile", async ({
   page,
   isMobile,
