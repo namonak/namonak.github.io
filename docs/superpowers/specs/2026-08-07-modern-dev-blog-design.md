@@ -38,8 +38,10 @@ Posts live under `src/content/blog/<category>/<slug>.md`. Their frontmatter reco
 The selected direction is reading-first responsive design:
 
 - **Desktop:** a restrained header, editorial hero, wide post-list column, and compact navigation sidebar.
-- **Tablet:** the primary content remains prominent; sidebar links become a short secondary navigation area below the list.
-- **Mobile:** only essential header navigation and post content remain visible; the layout is one column.
+- **Tablet:** the primary content remains in one column; the category sidebar stays hidden, with category navigation available through the header and `/categories/` archive.
+- **Mobile:** essential header navigation and post content remain in one column; the category sidebar stays hidden, with category navigation available through the header and `/categories/` archive.
+
+The document viewport uses the device width at an explicit initial scale of 1. This sets a predictable initial mobile rendering scale without disabling user zoom.
 
 `BaseLayout` owns the document shell, header, navigation, and footer. `PostCard` owns a post summary. `PostLayout` owns article metadata, readable body width, tags, and adjacent-post navigation. Category and tag pages reuse the same list components instead of creating separate presentation logic.
 
@@ -74,4 +76,3 @@ Hooks are deliberately deferred. A hook may be proposed only after the same manu
 ## Commit policy for this migration
 
 Each commit represents a meaningful, independently reviewable change; empty commits are prohibited. For this migration only, commit author and committer dates run from 2026-07-24 through 2026-08-06 with at most two meaningful commits per calendar day. Commits dated 2026-08-07 onward use the actual time. This temporary cadence belongs to the migration plan, not to the permanent `AGENTS.md` rules.
-
