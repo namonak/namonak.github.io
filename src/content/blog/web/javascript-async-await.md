@@ -1,7 +1,7 @@
 ---
 title: "async/await에서 오류와 취소를 분리하는 기준"
 description: "비동기 함수의 성공, 예상 가능한 오류, 취소 흐름을 호출자가 다루기 쉽게 만드는 방법입니다."
-publishedAt: 2026-08-02
+publishedAt: 2024-07-29
 category: "web"
 tags: ["javascript", "async-await"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Kotlin 코루틴 취소를 경계에서 다루는 방법"
 description: "구조화된 동시성에서 취소 신호를 전파하고, UI 상태를 안전하게 정리하는 기준을 살펴봅니다."
-publishedAt: 2026-08-02
+publishedAt: 2024-07-31
 category: "android"
 tags: ["kotlin", "coroutines", "android"]
 ---
