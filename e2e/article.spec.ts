@@ -20,7 +20,10 @@ test("mobile article keeps rendered diagrams within its content box", async ({
   );
 });
 
-test("mobile tables scroll without widening the document", async ({ page }) => {
+test("article tables stay contained and scroll on mobile", async ({
+  page,
+  isMobile,
+}) => {
   const tableArticlePaths = [
     "/android/kotlin-coroutines-cancellation/",
     "/web/map-vs-object/",
@@ -47,12 +50,14 @@ test("mobile tables scroll without widening the document", async ({ page }) => {
       ).toBeLessThanOrEqual(proseWidth);
     }
 
-    const hasScrollableTable = await tables.evaluateAll((renderedTables) =>
-      renderedTables.some((table) => table.scrollWidth > table.clientWidth),
-    );
-    expect(
-      hasScrollableTable,
-      `${path} table content should scroll internally`,
-    ).toBe(true);
+    if (isMobile) {
+      const hasScrollableTable = await tables.evaluateAll((renderedTables) =>
+        renderedTables.some((table) => table.scrollWidth > table.clientWidth),
+      );
+      expect(
+        hasScrollableTable,
+        `${path} table content should scroll internally`,
+      ).toBe(true);
+    }
   }
 });
