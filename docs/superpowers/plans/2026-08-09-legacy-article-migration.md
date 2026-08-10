@@ -143,6 +143,12 @@ If a planned day is missed, leave its checkboxes unchecked and process those art
 
 ### 2026-08-13 (목) — 2개
 
+> Route decisions recorded on 2026-08-10:
+>
+> - `WP#855` will be added at `/web/promise-and-async-await/`. It intentionally coexists with `/web/javascript-async-await/`, whose error-and-cancellation focus is distinct.
+> - `WP#802` will be added at `/software-development/base-encoding/`.
+> - Neither source has editorial images to download. Each article remains an individual signed commit on 2026-08-13, including only its Markdown entry and completed checkbox.
+
 - [ ] `WP#855` · 원문 2024-07-08 · **[JavaScript] Promise와 async/await** · [원문](https://blog.joannes.kr/programming/javascript-typescript/javascript-promise%ec%99%80-async-await/)
 - [ ] `WP#802` · 원문 2024-06-17 · **[Software Development] BASE 인코딩 개념 정리** · [원문](https://blog.joannes.kr/software-development/software-development-base-%ec%9d%b8%ec%bd%94%eb%94%a9-%ea%b0%9c%eb%85%90-%ec%a0%95%eb%a6%ac/)
 
