@@ -142,7 +142,7 @@
 > - `WP#802`는 `/software-development/base-encoding/`에 추가합니다.
 > - 두 원문에는 내려받을 편집용 이미지가 없습니다.
 
-- [ ] `WP#855` · 원문 2024-07-08 · **[JavaScript] Promise와 async/await** · [원문](https://blog.joannes.kr/programming/javascript-typescript/javascript-promise%ec%99%80-async-await/)
+- [x] `WP#855` · 원문 2024-07-08 · **[JavaScript] Promise와 async/await** · [원문](https://blog.joannes.kr/programming/javascript-typescript/javascript-promise%ec%99%80-async-await/)
 - [ ] `WP#802` · 원문 2024-06-17 · **[Software Development] BASE 인코딩 개념 정리** · [원문](https://blog.joannes.kr/software-development/software-development-base-%ec%9d%b8%ec%bd%94%eb%94%a9-%ea%b0%9c%eb%85%90-%ec%a0%95%eb%a6%ac/)
 
 ### 2026-08-11 (화) — 2편
