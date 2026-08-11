@@ -148,7 +148,7 @@
 ### 2026-08-11 (화) — 2편
 
 - [x] `WP#795` · 원문 2024-06-11 · **[JavaScript] 싱글톤 패턴(Singleton Pattern)의 이해와 구현 방법** · [원문](https://blog.joannes.kr/programming/javascript-typescript/javascript-%ec%9e%90%eb%b0%94%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-singleton-pattern-%ec%8b%b1%ea%b8%80%ed%86%a4-%ed%8c%a8%ed%84%b4/)
-- [ ] `WP#791` · 원문 2024-06-11 · **[JavaScript] var, let, const 선언 및 호이스팅(Hoisting) 개념 이해** · [원문](https://blog.joannes.kr/programming/javascript-typescript/javascript-var-let-const-%ec%84%a0%ec%96%b8-%eb%b0%8f-%ed%98%b8%ec%9d%b4%ec%8a%a4%ed%8c%85hoisting-%ea%b0%9c%eb%85%90-%ec%9d%b4%ed%95%b4/)
+- [x] `WP#791` · 원문 2024-06-11 · **[JavaScript] var, let, const 선언 및 호이스팅(Hoisting) 개념 이해** · [원문](https://blog.joannes.kr/programming/javascript-typescript/javascript-var-let-const-%ec%84%a0%ec%96%b8-%eb%b0%8f-%ed%98%b8%ec%9d%b4%ec%8a%a4%ed%8c%85hoisting-%ea%b0%9c%eb%85%90-%ec%9d%b4%ed%95%b4/)
 
 ### 2026-08-12 (수) — 2편
 
