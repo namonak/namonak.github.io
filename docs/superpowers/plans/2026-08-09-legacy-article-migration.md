@@ -152,7 +152,7 @@
 
 ### 2026-08-12 (수) — 2편
 
-- [ ] `WP#775` · 원문 2024-06-03 · **[Web Development] Window, Document, Navigator, Location, History 객체 정리** · [원문](https://blog.joannes.kr/web-development/web-development-window-document-navigator-location-history-%ea%b0%9d%ec%b2%b4-%ec%a0%95%eb%a6%ac/)
+- [x] `WP#775` · 원문 2024-06-03 · **[Web Development] Window, Document, Navigator, Location, History 객체 정리** · [원문](https://blog.joannes.kr/web-development/web-development-window-document-navigator-location-history-%ea%b0%9d%ec%b2%b4-%ec%a0%95%eb%a6%ac/)
 - [ ] `WP#768` · 원문 2024-04-30 · **[BOJ 백준] 1904번 : 01타일 – Kotlin[코틀린]** · [원문](https://blog.joannes.kr/algorithm/boj/boj-%eb%b0%b1%ec%a4%80-1904%eb%b2%88-01%ed%83%80%ec%9d%bc-kotlin%ec%bd%94%ed%8b%80%eb%a6%b0/)
 
 ### 2026-08-13 (목) — 2편
