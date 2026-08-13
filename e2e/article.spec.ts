@@ -20,6 +20,28 @@ test("mobile article keeps rendered diagrams within its content box", async ({
   );
 });
 
+test("mobile article title wraps long technical identifiers", async ({
+  page,
+  isMobile,
+}) => {
+  test.skip(!isMobile, "The narrow viewport is the overflow boundary.");
+
+  await page.goto("/java/concurrent-modification-exception/");
+  const article = page.locator("article");
+  const title = article.locator("header > h1");
+
+  expect((await title.boundingBox())?.width).toBeLessThanOrEqual(
+    (await article.boundingBox())?.width ?? 0,
+  );
+  expect(
+    await page.evaluate(
+      () =>
+        document.documentElement.scrollWidth -
+        document.documentElement.clientWidth,
+    ),
+  ).toBe(0);
+});
+
 test("long prose strings wrap without widening the document", async ({
   page,
 }) => {
