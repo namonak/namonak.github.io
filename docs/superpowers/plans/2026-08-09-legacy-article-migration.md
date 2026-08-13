@@ -158,7 +158,7 @@
 ### 2026-08-13 (목) — 2편
 
 - [x] `WP#783` · 원문 2024-04-18 · **[Java] ConcurrentModificationException의 원인과 해결책** · [원문](https://blog.joannes.kr/programming/java/java-concurrentmodificationexception%ec%9d%98-%ec%9b%90%ec%9d%b8%ea%b3%bc-%ed%95%b4%ea%b2%b0%ec%b1%85/)
-- [ ] `WP#760` · 원문 2024-03-29 · **[Linux] netstat 명령어 사용법** · [원문](https://blog.joannes.kr/linux/linux-netstat-%eb%aa%85%eb%a0%b9%ec%96%b4-%ec%82%ac%ec%9a%a9%eb%b2%95/)
+- [x] `WP#760` · 원문 2024-03-29 · **[Linux] netstat 명령어 사용법** · [원문](https://blog.joannes.kr/linux/linux-netstat-%eb%aa%85%eb%a0%b9%ec%96%b4-%ec%82%ac%ec%9a%a9%eb%b2%95/)
 
 ### 2026-08-14 (금) — 2편
 
