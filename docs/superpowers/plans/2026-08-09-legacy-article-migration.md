@@ -163,7 +163,7 @@
 ### 2026-08-14 (금) — 2편
 
 - [x] `WP#748` · 원문 2024-03-18 · **[Linux] tcpdump** · [원문](https://blog.joannes.kr/linux/linux-tcpdump/)
-- [ ] `WP#741` · 원문 2024-03-18 · **[Linux] nc(Netcat) 사용법에 대한 이해와 활용** · [원문](https://blog.joannes.kr/linux/linux-nc_netcat-%ec%82%ac%ec%9a%a9%eb%b2%95%ec%97%90-%eb%8c%80%ed%95%9c-%ec%9d%b4%ed%95%b4%ec%99%80-%ed%99%9c%ec%9a%a9/)
+- [x] `WP#741` · 원문 2024-03-18 · **[Linux] nc(Netcat) 사용법에 대한 이해와 활용** · [원문](https://blog.joannes.kr/linux/linux-nc_netcat-%ec%82%ac%ec%9a%a9%eb%b2%95%ec%97%90-%eb%8c%80%ed%95%9c-%ec%9d%b4%ed%95%b4%ec%99%80-%ed%99%9c%ec%9a%a9/)
 
 ### 2026-08-15 (토) — 4편
 
