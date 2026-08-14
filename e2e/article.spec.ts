@@ -122,3 +122,20 @@ test("article tables stay contained and scroll on mobile", async ({
     }
   }
 });
+
+test("draft English posts are not served publicly", async ({ page }) => {
+  const privatePostPaths = [
+    "/english/get-phrasal-verbs/",
+    "/english/make-phrasal-verbs/",
+    "/english/phrasal-verbs-guide/",
+    "/english/pick-up-phrasal-verb/",
+    "/english/run-phrasal-verbs/",
+    "/english/take-phrasal-verbs/",
+  ];
+
+  for (const path of privatePostPaths) {
+    const response = await page.goto(path);
+
+    expect(response?.status(), `${path} must remain private`).toBe(404);
+  }
+});

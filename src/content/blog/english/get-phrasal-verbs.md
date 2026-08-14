@@ -3,6 +3,7 @@ title: "get 구동사 정리: get over, get down, get by, get at 뜻과 예문"
 description: "get 계열 구동사의 핵심 이미지와 문법 패턴을 다양한 예문으로 정리합니다."
 publishedAt: 2026-05-20
 category: "english"
+draft: true
 tags: ["english", "phrasal-verbs", "get-over", "get-down", "get-by", "get-at"]
 ---
 

@@ -3,6 +3,7 @@ title: "run 구동사 정리: run out, run into 뜻과 예문"
 description: "run out과 run into의 핵심 이미지, 주요 의미, 문법 패턴을 예문과 함께 정리합니다."
 publishedAt: 2026-05-27
 category: "english"
+draft: true
 tags: ["english", "phrasal-verbs", "run-out", "run-into"]
 ---
 

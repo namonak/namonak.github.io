@@ -3,6 +3,7 @@ title: "구동사(Phrasal Verbs)란? 기본 개념과 공부법"
 description: "영어 구동사의 기본 개념, 핵심 이미지 중심의 학습법, 함께 정리할 문법 패턴을 소개합니다."
 publishedAt: 2026-05-04
 category: "english"
+draft: true
 tags: ["english", "phrasal-verbs", "english-study", "conversation"]
 ---
 

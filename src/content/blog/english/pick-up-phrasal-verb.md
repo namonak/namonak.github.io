@@ -3,6 +3,7 @@ title: "pick up 뜻과 예문 정리: 줍다, 데리러 가다, 배우다"
 description: "pick up의 핵심 이미지와 줍다, 데리러 가다, 배우다, 회복되다 등의 쓰임을 예문으로 정리합니다."
 publishedAt: 2026-05-04
 category: "english"
+draft: true
 tags: ["english", "phrasal-verbs", "pick-up"]
 ---
 

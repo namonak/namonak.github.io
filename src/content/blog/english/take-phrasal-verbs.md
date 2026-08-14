@@ -3,6 +3,7 @@ title: "take 구동사 정리: take up, take out, take off, take over 뜻과 예
 description: "take up, take out, take off, take over 등 take 계열 구동사의 의미와 문법 패턴을 예문으로 정리합니다."
 publishedAt: 2026-05-13
 category: "english"
+draft: true
 tags:
   ["english", "phrasal-verbs", "take-up", "take-out", "take-off", "take-over"]
 ---

@@ -3,6 +3,7 @@ title: "make 구동사 정리: make up, make out, make of 뜻과 예문"
 description: "make up, make out, make of 등 make 계열 구동사의 의미와 문법 패턴을 예문으로 정리합니다."
 publishedAt: 2026-05-06
 category: "english"
+draft: true
 tags: ["english", "phrasal-verbs", "make-up", "make-out", "make-of"]
 ---
 
