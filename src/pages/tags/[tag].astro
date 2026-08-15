@@ -7,7 +7,7 @@ import { getPostsByTag, getPublishedPosts } from "../../lib/posts";
 export async function getStaticPaths() {
   const posts = getPublishedPosts(await getCollection("blog"));
   const tags = [...new Set(posts.flatMap((post) => post.data.tags))].sort();
-  return tags.map((tag) => ({ params: { tag: encodeURIComponent(tag) }, props: { tag, posts: getPostsByTag(posts, tag) } }));
+  return tags.map((tag) => ({ params: { tag }, props: { tag, posts: getPostsByTag(posts, tag) } }));
 }
 
 const { tag, posts } = Astro.props;
