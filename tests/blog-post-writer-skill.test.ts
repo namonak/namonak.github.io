@@ -1,0 +1,44 @@
+import { readFile } from "node:fs/promises";
+import { describe, expect, it } from "vitest";
+
+const repositoryRoot = new URL("../", import.meta.url);
+const readProjectFile = (path: string) =>
+  readFile(new URL(path, repositoryRoot), "utf8");
+
+describe("blog post writer skill", () => {
+  it("keeps the Korean skill and its focused references together", async () => {
+    const [skill, voice, evidence, quality] = await Promise.all([
+      readProjectFile("skills/blog-post-writer/SKILL.md"),
+      readProjectFile(
+        "skills/blog-post-writer/references/voice-and-structure.md",
+      ),
+      readProjectFile(
+        "skills/blog-post-writer/references/evidence-and-citations.md",
+      ),
+      readProjectFile("skills/blog-post-writer/references/quality-gates.md"),
+    ]);
+
+    expect(skill).toContain("블로그 글 작성 스킬");
+    expect(skill).toContain("references/voice-and-structure.md");
+    expect(skill).toContain("references/evidence-and-citations.md");
+    expect(skill).toContain("references/quality-gates.md");
+    expect(voice).toContain("개발자");
+    expect(evidence).toContain("[^source-id]");
+    expect(quality).toContain("draft: true");
+  });
+
+  it("requires research, visible article attribution, and GFM citations", async () => {
+    const [skill, evidence] = await Promise.all([
+      readProjectFile("skills/blog-post-writer/SKILL.md"),
+      readProjectFile(
+        "skills/blog-post-writer/references/evidence-and-citations.md",
+      ),
+    ]);
+
+    expect(skill).toContain("조사");
+    expect(skill).toContain("초안");
+    expect(evidence).toContain("> 원문:");
+    expect(evidence).toContain("GFM 각주");
+    expect(evidence).toContain("HTML 앵커");
+  });
+});
