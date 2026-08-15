@@ -4,4 +4,5 @@ playwright-report/
 test-results/
 .astro/
 .superpowers/
+.worktrees/
 .obsidian/
