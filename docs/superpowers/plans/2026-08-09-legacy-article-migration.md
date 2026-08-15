@@ -167,7 +167,7 @@
 
 ### 2026-08-15 (토) — 4편
 
-- [ ] `WP#720` · 원문 2024-03-14 · **[Git] Git LFS에 대한 이해와 사용법** · [원문](https://blog.joannes.kr/git/git-lfs%ec%97%90-%eb%8c%80%ed%95%9c-%ec%9d%b4%ed%95%b4%ec%99%80-%ec%82%ac%ec%9a%a9%eb%b2%95/)
+- [x] `WP#720` · 원문 2024-03-14 · **[Git] Git LFS에 대한 이해와 사용법** · [원문](https://blog.joannes.kr/git/git-lfs%ec%97%90-%eb%8c%80%ed%95%9c-%ec%9d%b4%ed%95%b4%ec%99%80-%ec%82%ac%ec%9a%a9%eb%b2%95/)
 - [ ] `WP#705` · 원문 2024-03-12 · **[Programming] 동적 계획법(Dynamic Programming)** · [원문](https://blog.joannes.kr/programming/programming-%eb%8f%99%ec%a0%81-%ea%b3%84%ed%9a%8d%eb%b2%95dynamic-programming/)
 - [ ] `WP#699` · 원문 2024-03-12 · **[Programming] 재귀함수(Recursive Function)** · [원문](https://blog.joannes.kr/programming/programming-%ec%9e%ac%ea%b7%80%ed%95%a8%ec%88%98recursive-function/)
 - [ ] `WP#690` · 원문 2024-03-11 · **[Kotlin] PriorityQueue** · [원문](https://blog.joannes.kr/programming/kotlin/kotlin-priorityqueue-%ec%bd%94%ed%8b%80%eb%a6%b0-%ec%9a%b0%ec%84%a0%ec%88%9c%ec%9c%84%ed%81%90/)
