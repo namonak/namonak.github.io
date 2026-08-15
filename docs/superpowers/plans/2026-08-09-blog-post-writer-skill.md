@@ -24,18 +24,19 @@
 
 ## File structure
 
-| Path | Responsibility |
-| --- | --- |
-| `skills/blog-post-writer/SKILL.md` | 적용 범위, 사전 읽기, 입력 분기, 조사→초안→인계, 중단 기준 |
-| `skills/blog-post-writer/references/voice-and-structure.md` | 개발자 대상 문체, 전개, 조건부 단정, 비유 |
-| `skills/blog-post-writer/references/evidence-and-citations.md` | 조사, 1차 출처, 원문 검증·정정, GFM 각주 |
-| `skills/blog-post-writer/references/quality-gates.md` | `draft: true`, 콘텐츠·코드·Mermaid·반응형 검증, 인계 제한 |
-| `tests/blog-post-writer-skill.test.ts` | 스킬 문서 존재·연결·GFM 각주·초안 정책·`AGENTS.md` 활성화 계약 |
-| `AGENTS.md` | 새 원본 글에서 스킬을 읽게 하는 저장소 수준 진입점 |
+| Path                                                           | Responsibility                                                 |
+| -------------------------------------------------------------- | -------------------------------------------------------------- |
+| `skills/blog-post-writer/SKILL.md`                             | 적용 범위, 사전 읽기, 입력 분기, 조사→초안→인계, 중단 기준     |
+| `skills/blog-post-writer/references/voice-and-structure.md`    | 개발자 대상 문체, 전개, 조건부 단정, 비유                      |
+| `skills/blog-post-writer/references/evidence-and-citations.md` | 조사, 1차 출처, 원문 검증·정정, GFM 각주                       |
+| `skills/blog-post-writer/references/quality-gates.md`          | `draft: true`, 콘텐츠·코드·Mermaid·반응형 검증, 인계 제한      |
+| `tests/blog-post-writer-skill.test.ts`                         | 스킬 문서 존재·연결·GFM 각주·초안 정책·`AGENTS.md` 활성화 계약 |
+| `AGENTS.md`                                                    | 새 원본 글에서 스킬을 읽게 하는 저장소 수준 진입점             |
 
 ## Task 1: 스킬 문서와 계약 테스트 추가
 
 **Files:**
+
 - Create: `tests/blog-post-writer-skill.test.ts`
 - Create: `skills/blog-post-writer/SKILL.md`
 - Create: `skills/blog-post-writer/references/voice-and-structure.md`
@@ -43,6 +44,7 @@
 - Create: `skills/blog-post-writer/references/quality-gates.md`
 
 **Interfaces:**
+
 - Consumes: `ARCHITECTURE.md`, `docs/content-guide.md`, `src/content.config.ts`, `src/content/blog/`, `package.json`.
 - Produces: 상대 경로로 세 보조 문서를 읽게 하는 한국어 스킬과 파일 계약 테스트.
 
@@ -62,8 +64,12 @@ describe("blog post writer skill", () => {
   it("keeps the Korean skill and its focused references together", async () => {
     const [skill, voice, evidence, quality] = await Promise.all([
       readProjectFile("skills/blog-post-writer/SKILL.md"),
-      readProjectFile("skills/blog-post-writer/references/voice-and-structure.md"),
-      readProjectFile("skills/blog-post-writer/references/evidence-and-citations.md"),
+      readProjectFile(
+        "skills/blog-post-writer/references/voice-and-structure.md",
+      ),
+      readProjectFile(
+        "skills/blog-post-writer/references/evidence-and-citations.md",
+      ),
       readProjectFile("skills/blog-post-writer/references/quality-gates.md"),
     ]);
 
@@ -79,7 +85,9 @@ describe("blog post writer skill", () => {
   it("requires research, visible article attribution, and GFM citations", async () => {
     const [skill, evidence] = await Promise.all([
       readProjectFile("skills/blog-post-writer/SKILL.md"),
-      readProjectFile("skills/blog-post-writer/references/evidence-and-citations.md"),
+      readProjectFile(
+        "skills/blog-post-writer/references/evidence-and-citations.md",
+      ),
     ]);
 
     expect(skill).toContain("조사");
@@ -93,7 +101,7 @@ describe("blog post writer skill", () => {
 
 - [ ] **Step 2: 테스트가 실패하는지 확인한다**
 
-Run: `npm run test -- tests/blog-post-writer-skill.test.ts`
+Run: `npm exec vitest -- run tests/blog-post-writer-skill.test.ts`
 
 Expected: `skills/blog-post-writer/` 파일이 없으므로 `ENOENT`로 FAIL.
 
@@ -103,12 +111,19 @@ Expected: `skills/blog-post-writer/` 파일이 없으므로 `ENOENT`로 FAIL.
 
 ```md
 # 블로그 글 작성 스킬
+
 ## 적용 대상과 제외 대상
+
 ## 시작 전 필수 읽기
+
 ## 입력 판단과 질문 기준
+
 ## 조사와 근거 확인
+
 ## 글 작성
+
 ## 검증과 인계
+
 ## 중단 기준
 ```
 
@@ -155,7 +170,7 @@ HTTP 상태 코드는 응답의 결과를 나타냅니다.[^rfc-9110]
 
 - [ ] **Step 7: 계약 테스트가 통과하는지 확인한다**
 
-Run: `npm run test -- tests/blog-post-writer-skill.test.ts`
+Run: `npm exec vitest -- run tests/blog-post-writer-skill.test.ts`
 
 Expected: PASS. 네 스킬 문서의 존재, 한국어 제목, 상호 참조, 조사·원문 블록·GFM 각주·`draft: true` 계약을 확인한다.
 
@@ -173,10 +188,12 @@ Expected: 스킬 문서 네 개와 계약 테스트 한 개만 포함한 서명 
 ## Task 2: `AGENTS.md`로 스킬을 활성화한다
 
 **Files:**
+
 - Modify: `tests/blog-post-writer-skill.test.ts`
 - Modify: `AGENTS.md`
 
 **Interfaces:**
+
 - Consumes: Task 1의 `skills/blog-post-writer/SKILL.md`.
 - Produces: 새 원본 글에만 스킬을 적용하고 레거시 이전은 제외하는 저장소 지침.
 
@@ -185,18 +202,18 @@ Expected: 스킬 문서 네 개와 계약 테스트 한 개만 포함한 서명 
 같은 `describe` 블록에 아래 테스트를 추가한다.
 
 ```ts
-  it("activates the repository skill for new original posts only", async () => {
-    const agents = await readProjectFile("AGENTS.md");
+it("activates the repository skill for new original posts only", async () => {
+  const agents = await readProjectFile("AGENTS.md");
 
-    expect(agents).toContain("skills/blog-post-writer/SKILL.md");
-    expect(agents).toContain("신규 원본 블로그 글");
-    expect(agents).toContain("레거시 마이그레이션");
-  });
+  expect(agents).toContain("skills/blog-post-writer/SKILL.md");
+  expect(agents).toContain("신규 원본 블로그 글");
+  expect(agents).toContain("레거시 마이그레이션");
+});
 ```
 
 - [ ] **Step 2: 새 계약이 실패하는지 확인한다**
 
-Run: `npm run test -- tests/blog-post-writer-skill.test.ts`
+Run: `npm exec vitest -- run tests/blog-post-writer-skill.test.ts`
 
 Expected: `AGENTS.md`에 경로와 적용·제외 범위가 없으므로 FAIL.
 
@@ -213,7 +230,7 @@ Expected: `AGENTS.md`에 경로와 적용·제외 범위가 없으므로 FAIL.
 
 - [ ] **Step 4: 활성화 계약이 통과하는지 확인한다**
 
-Run: `npm run test -- tests/blog-post-writer-skill.test.ts`
+Run: `npm exec vitest -- run tests/blog-post-writer-skill.test.ts`
 
 Expected: PASS. 문서 계약과 새 원본 글 전용 활성화 규칙을 모두 확인한다.
 
@@ -231,9 +248,11 @@ Expected: `AGENTS.md`와 테스트 변경만 포함한 서명 커밋.
 ## Task 3: 전체 검증과 적용 경로 점검
 
 **Files:**
+
 - Verify only: `skills/blog-post-writer/`, `AGENTS.md`, `tests/blog-post-writer-skill.test.ts`
 
 **Interfaces:**
+
 - Consumes: Task 1과 Task 2의 스킬 문서·활성화 규칙·계약 테스트.
 - Produces: 검사 결과와 수동 적용 경로 확인. 파일 변경이나 커밋은 만들지 않는다.
 
@@ -242,7 +261,7 @@ Expected: `AGENTS.md`와 테스트 변경만 포함한 서명 커밋.
 Run:
 
 ```bash
-npm run test -- tests/blog-post-writer-skill.test.ts
+npm exec vitest -- run tests/blog-post-writer-skill.test.ts
 npm run test
 ```
 
@@ -259,7 +278,19 @@ npm run validate:mermaid
 npm run format:check
 ```
 
-Expected: 모두 PASS. 스킬 문서와 `AGENTS.md`가 콘텐츠 컬렉션, Mermaid SVG 렌더링, 정적 빌드, 서식에 회귀를 만들지 않는다.
+Expected: `check`, `build`, `validate:mermaid`는 PASS. 전체 `format:check`가 기준선의 기존 파일을 지적하면, 변경 범위를 포맷터로 따로 확인한다.
+
+Run:
+
+```bash
+npm exec prettier -- --check \
+  AGENTS.md \
+  skills/blog-post-writer \
+  tests/blog-post-writer-skill.test.ts \
+  docs/superpowers/plans/2026-08-09-blog-post-writer-skill.md
+```
+
+Expected: PASS. 이번 변경의 스킬 문서, 저장소 지침, 계약 테스트, 구현 계획은 모두 Prettier 형식을 따른다.
 
 - [ ] **Step 3: Codex 적용 경로를 수동 점검한다**
 
