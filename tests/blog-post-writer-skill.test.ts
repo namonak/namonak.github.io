@@ -41,4 +41,12 @@ describe("blog post writer skill", () => {
     expect(evidence).toContain("GFM 각주");
     expect(evidence).toContain("HTML 앵커");
   });
+
+  it("activates the repository skill for new original posts only", async () => {
+    const agents = await readProjectFile("AGENTS.md");
+
+    expect(agents).toContain("skills/blog-post-writer/SKILL.md");
+    expect(agents).toContain("신규 원본 블로그 글");
+    expect(agents).toContain("레거시 마이그레이션");
+  });
 });
