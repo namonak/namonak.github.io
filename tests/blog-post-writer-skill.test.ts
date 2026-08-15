@@ -22,9 +22,10 @@ describe("blog post writer skill", () => {
     expect(skill).toContain("references/voice-and-structure.md");
     expect(skill).toContain("references/evidence-and-citations.md");
     expect(skill).toContain("references/quality-gates.md");
+    expect(skill).toContain("검증을 마친 뒤에만");
     expect(voice).toContain("개발자");
     expect(evidence).toContain("[^source-id]");
-    expect(quality).toContain("draft: true");
+    expect(quality).toContain("`draft: true`");
   });
 
   it("requires research, visible article attribution, and GFM citations", async () => {
@@ -37,9 +38,13 @@ describe("blog post writer skill", () => {
 
     expect(skill).toContain("조사");
     expect(skill).toContain("초안");
+    expect(skill).toContain("frontmatter 바로 다음");
     expect(evidence).toContain("> 원문:");
     expect(evidence).toContain("GFM 각주");
-    expect(evidence).toContain("HTML 앵커");
+    expect(evidence).toContain("독립적으로 검증합니다");
+    expect(evidence).toContain(
+      "수동 `## 참고` 목록, 수동 번호, HTML 앵커는 사용하지 않습니다.",
+    );
   });
 
   it("activates the repository skill for new original posts only", async () => {
