@@ -177,7 +177,7 @@
 - [x] `WP#663` · 원문 2024-02-29 · **[Android] Android Compose 소개** · [원문](https://blog.joannes.kr/android/android-android-compose/)
 - [x] `WP#639` · 원문 2024-01-24 · **[Kotlin] Custom Kotlin delegates** · [원문](https://blog.joannes.kr/programming/kotlin/custom-kotlin-delegates/)
 - [x] `WP#521` · 원문 2024-01-12 · **[Kotlin] Annotation** · [원문](https://blog.joannes.kr/programming/kotlin/kotlin-custom-annotation-%ec%bb%a4%ec%8a%a4%ed%85%80-%ec%96%b4%eb%85%b8%ed%85%8c%ec%9d%b4%ec%85%98/)
-- [ ] `WP#754` · 원문 2024-01-11 · **[Software Development] CI/CD 모범 사례** · [원문](https://blog.joannes.kr/software-development/ci-cd-%eb%aa%a8%eb%b2%94-%ec%82%ac%eb%a1%80/)
+- [x] `WP#754` · 원문 2024-01-11 · **[Software Development] CI/CD 모범 사례** · [원문](https://blog.joannes.kr/software-development/ci-cd-%eb%aa%a8%eb%b2%94-%ec%82%ac%eb%a1%80/)
 
 ### 2026-08-17 (월) — 2편
 
