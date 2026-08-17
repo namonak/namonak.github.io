@@ -182,7 +182,7 @@
 ### 2026-08-17 (월) — 2편
 
 - [x] `WP#633` · 원문 2024-01-05 · **[Software Development] 2023/2024 소프트웨어 개발 동향** · [원문](https://blog.joannes.kr/software-development/software-development-trends-2023-2024/)
-- [ ] `WP#682` · 원문 2024-01-01 · **[Android] Jetpack Compose** · [원문](https://blog.joannes.kr/android/android-jetpack-compose/)
+- [x] `WP#682` · 원문 2024-01-01 · **[Android] Jetpack Compose** · [원문](https://blog.joannes.kr/android/android-jetpack-compose/)
 
 ### 2026-08-18 (화) — 2편
 
