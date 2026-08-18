@@ -186,7 +186,7 @@
 
 ### 2026-08-18 (화) — 2편
 
-- [ ] `WP#684` · 원문 2023-12-28 · **[Software Development] API Design 101: 기본부터 모범 사례까지(From Basics to Best Practices)** · [원문](https://blog.joannes.kr/software-development/api-design-101-%ea%b8%b0%eb%b3%b8%eb%b6%80%ed%84%b0-%eb%aa%a8%eb%b2%94-%ec%82%ac%eb%a1%80%ea%b9%8c%ec%a7%80-from-basics-to-best-practices/)
+- [x] `WP#684` · 원문 2023-12-28 · **[Software Development] API Design 101: 기본부터 모범 사례까지(From Basics to Best Practices)** · [원문](https://blog.joannes.kr/software-development/api-design-101-%ea%b8%b0%eb%b3%b8%eb%b6%80%ed%84%b0-%eb%aa%a8%eb%b2%94-%ec%82%ac%eb%a1%80%ea%b9%8c%ec%a7%80-from-basics-to-best-practices/)
 - [ ] `WP#657` · 원문 2023-12-27 · **[Software Development] 모바일 애플리케이션 아키텍처 vs. 디자인 패턴** · [원문](https://blog.joannes.kr/software-development/mobile-application-architecture-vs-design-patterns/)
 
 ### 2026-08-19 (수) — 2편
