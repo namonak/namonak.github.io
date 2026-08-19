@@ -192,7 +192,7 @@
 ### 2026-08-19 (수) — 2편
 
 - [x] `WP#627` · 원문 2023-12-21 · **[Software Development] 기술 부채를 다루는 방법** · [원문](https://blog.joannes.kr/software-development/how-to-deal-with-technical-debt/)
-- [ ] `WP#725` · 원문 2023-11-29 · **[Software Development] 스프링 부트에서 데이터 전송 객체 (DTO)** · [원문](https://blog.joannes.kr/article-%ec%a0%95%eb%a6%ac/%ec%8a%a4%ed%94%84%eb%a7%81-%eb%b6%80%ed%8a%b8%ec%97%90%ec%84%9c-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%a0%84%ec%86%a1-%ea%b0%9d%ec%b2%b4-dto/)
+- [x] `WP#725` · 원문 2023-11-29 · **[Software Development] 스프링 부트에서 데이터 전송 객체 (DTO)** · [원문](https://blog.joannes.kr/article-%ec%a0%95%eb%a6%ac/%ec%8a%a4%ed%94%84%eb%a7%81-%eb%b6%80%ed%8a%b8%ec%97%90%ec%84%9c-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%a0%84%ec%86%a1-%ea%b0%9d%ec%b2%b4-dto/)
 
 ### 2026-08-20 (목) — 2편
 
