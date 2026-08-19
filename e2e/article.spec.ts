@@ -139,3 +139,18 @@ test("draft English posts are not served publicly", async ({ page }) => {
     expect(response?.status(), `${path} must remain private`).toBe(404);
   }
 });
+
+test("retired Medium summaries are not served publicly", async ({ page }) => {
+  const retiredPostPaths = [
+    "/software-development/ci-cd-best-practices/",
+    "/software-development/mobile-application-architecture-vs-design-patterns/",
+    "/software-development/software-development-trends-2023-2024/",
+    "/software-development/spring-boot-dto/",
+  ];
+
+  for (const path of retiredPostPaths) {
+    const response = await page.goto(path);
+
+    expect(response?.status(), `${path} must remain retired`).toBe(404);
+  }
+});
