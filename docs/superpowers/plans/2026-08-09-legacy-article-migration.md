@@ -197,7 +197,7 @@
 ### 2026-08-20 (목) — 2편
 
 - [x] `WP#635` · 원문 2023-11-13 · **[Kotlin] 다형성과 인터페이스** · [원문](https://blog.joannes.kr/programming/kotlin/kotlin-%eb%8b%a4%ed%98%95%ec%84%b1%ea%b3%bc-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4/)
-- [ ] `WP#625` · 원문 2023-09-29 · **[Database] 데이터베이스 유형, 스케일링, 성능 최적화** · [원문](https://blog.joannes.kr/database/database-%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4-%ec%9c%a0%ed%98%95-%ec%8a%a4%ec%bc%80%ec%9d%bc%eb%a7%81-%ec%84%b1%eb%8a%a5-%ec%b5%9c%ec%a0%81%ed%99%94/)
+- [x] `WP#625` · 원문 2023-09-29 · **[Database] 데이터베이스 유형, 스케일링, 성능 최적화** · [원문](https://blog.joannes.kr/database/database-%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4-%ec%9c%a0%ed%98%95-%ec%8a%a4%ec%bc%80%ec%9d%bc%eb%a7%81-%ec%84%b1%eb%8a%a5-%ec%b5%9c%ec%a0%81%ed%99%94/)
 
 ### 2026-08-21 (금) — 2편
 
