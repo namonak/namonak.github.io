@@ -201,7 +201,7 @@
 
 ### 2026-08-21 (금) — 2편
 
-- [ ] `WP#508` · 원문 2023-07-29 · **[Network] URI, URL 및 URN 정리** · [원문](https://blog.joannes.kr/web-development/network-uri-url-%eb%b0%8f-urn-%ec%a0%95%eb%a6%ac/)
+- [x] `WP#508` · 원문 2023-07-29 · **[Network] URI, URL 및 URN 정리** · [원문](https://blog.joannes.kr/web-development/network-uri-url-%eb%b0%8f-urn-%ec%a0%95%eb%a6%ac/)
 - [ ] `WP#485` · 원문 2023-07-26 · **[Web Development] CSR (Client-Side Rendering)과 SSR (Server-Side Rendering) 이해하기** · [원문](https://blog.joannes.kr/web-development/web-development-csr-client-side-rendering%ea%b3%bc-ssr-server-side-rendering-%ec%9d%b4%ed%95%b4%ed%95%98%ea%b8%b0/)
 
 ### 2026-08-22 (토) — 4편
