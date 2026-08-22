@@ -206,7 +206,7 @@
 
 ### 2026-08-22 (토) — 4편
 
-- [ ] `WP#472` · 원문 2023-07-17 · **[Web Development] CORS (Cross-Origin Resource Sharing) 이해하기** · [원문](https://blog.joannes.kr/web-development/cors-cross-origin-resource-sharing-%ec%9d%b4%ed%95%b4/)
+- [x] `WP#472` · 원문 2023-07-17 · **[Web Development] CORS (Cross-Origin Resource Sharing) 이해하기** · [원문](https://blog.joannes.kr/web-development/cors-cross-origin-resource-sharing-%ec%9d%b4%ed%95%b4/)
 - [ ] `WP#468` · 원문 2023-07-13 · **[C] qsort() 함수** · [원문](https://blog.joannes.kr/programming/c/c-qsort-%ed%95%a8%ec%88%98/)
 - [ ] `WP#464` · 원문 2023-07-10 · **[Kotlin] Array와 IntArray의 차이점** · [원문](https://blog.joannes.kr/programming/kotlin/kotlin-array%ec%99%80-intarray%ec%9d%98-%ec%b0%a8%ec%9d%b4%ec%a0%90/)
 - [ ] `WP#430` · 원문 2023-06-16 · **[BOJ 백준] 19532번 : 수학은 비대면강의입니다 – Kotlin[코틀린]** · [원문](https://blog.joannes.kr/algorithm/boj/boj-%eb%b0%b1%ec%a4%80-19532%eb%b2%88-%ec%88%98%ed%95%99%ec%9d%80-%eb%b9%84%eb%8c%80%eb%a9%b4%ea%b0%95%ec%9d%98%ec%9e%85%eb%8b%88%eb%8b%a4-kotlin%ec%bd%94%ed%8b%80%eb%a6%b0/)
