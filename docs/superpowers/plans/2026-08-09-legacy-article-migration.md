@@ -216,7 +216,7 @@
 - [x] `WP#423` · 원문 2023-06-07 · **[BOJ 백준] 1193번 : 분수찾기 – Kotlin[코틀린]** · [원문](https://blog.joannes.kr/algorithm/boj/boj-%eb%b0%b1%ec%a4%80-1193%eb%b2%88-%eb%b6%84%ec%88%98%ec%b0%be%ea%b8%b0-kotlin%ec%bd%94%ed%8b%80%eb%a6%b0/)
 - [x] `WP#416` · 원문 2023-05-22 · **[BOJ 백준] 1934번 : 최소공배수 – Kotlin[코틀린]** · [원문](https://blog.joannes.kr/algorithm/boj/boj-%eb%b0%b1%ec%a4%80-1934%eb%b2%88-%ec%b5%9c%ec%86%8c%ea%b3%b5%eb%b0%b0%ec%88%98-kotlin%ec%bd%94%ed%8b%80%eb%a6%b0/)
 - [x] `WP#411` · 원문 2023-03-15 · **[BOJ 백준] 2164번 : 카드2 – Kotlin[코틀린]** · [원문](https://blog.joannes.kr/algorithm/boj/boj-%eb%b0%b1%ec%a4%80-2164%eb%b2%88-%ec%b9%b4%eb%93%9c2-kotlin%ec%bd%94%ed%8b%80%eb%a6%b0/)
-- [ ] `WP#408` · 원문 2023-03-14 · **[Jenkins] trackingSubmodules 옵션에 관하여** · [원문](https://blog.joannes.kr/memo/jenkins-trackingsubmodules-%ec%98%b5%ec%85%98%ec%97%90-%ea%b4%80%ed%95%98%ec%97%ac/)
+- [x] `WP#408` · 원문 2023-03-14 · **[Jenkins] trackingSubmodules 옵션에 관하여** · [원문](https://blog.joannes.kr/memo/jenkins-trackingsubmodules-%ec%98%b5%ec%85%98%ec%97%90-%ea%b4%80%ed%95%98%ec%97%ac/)
 
 ### 2026-08-24 (월) — 2편
 
