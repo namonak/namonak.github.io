@@ -9,6 +9,13 @@ test("representative article renders code, diagram, and metadata", async ({
   await expect(page.locator("article time")).toHaveCount(1);
 });
 
+test("legacy article hides its migration update date", async ({ page }) => {
+  await page.goto("/web/cors-cross-origin-resource-sharing/");
+
+  await expect(page.locator(".dates time")).toHaveCount(1);
+  await expect(page.locator(".dates")).toHaveText(/게시 2023년 7월 17일/);
+});
+
 test("mobile article keeps rendered diagrams within its content box", async ({
   page,
 }) => {

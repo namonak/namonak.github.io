@@ -13,11 +13,12 @@ interface Props {
   tags: string[];
   publishedAt: Date;
   updatedAt?: Date;
+  showUpdatedAt: boolean;
   previous: AdjacentPost | null;
   next: AdjacentPost | null;
 }
 
-const { title, description, category, tags, publishedAt, updatedAt, previous, next } = Astro.props;
+const { title, description, category, tags, publishedAt, updatedAt, showUpdatedAt, previous, next } = Astro.props;
 const formatDate = (date: Date) =>
   new Intl.DateTimeFormat("ko-KR", { year: "numeric", month: "long", day: "numeric" }).format(date);
 ---
@@ -30,7 +31,7 @@ const formatDate = (date: Date) =>
       <p class="description">{description}</p>
       <p class="dates">
         <time datetime={publishedAt.toISOString()}>게시 {formatDate(publishedAt)}</time>
-        {updatedAt && <time datetime={updatedAt.toISOString()}>수정 {formatDate(updatedAt)}</time>}
+        {updatedAt && showUpdatedAt && <time datetime={updatedAt.toISOString()}>수정 {formatDate(updatedAt)}</time>}
       </p>
     </header>
     <div class="prose"><slot /></div>
