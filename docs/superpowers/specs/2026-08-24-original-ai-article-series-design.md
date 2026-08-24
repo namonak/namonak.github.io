@@ -69,7 +69,7 @@
 
 ## 계획 문서와 완료 기준
 
-승인된 실행 계획은 `docs/superpowers/plans/2026-08-25-original-ai-article-series.md`에 별도로 기록한다. 레거시 이전 계획과 이 신규 글 일정은 서로의 체크박스를 수정하지 않는다.
+승인된 실행 계획은 `docs/superpowers/plans/2026-08-24-original-ai-article-series.md`에 별도로 기록한다. 레거시 이전 계획과 이 신규 글 일정은 서로의 체크박스를 수정하지 않는다.
 
 각 작업일의 완료는 다음 모두를 만족할 때만 선언한다.
 
