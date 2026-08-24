@@ -1,7 +1,7 @@
 ---
 title: "모델을 교체할 때 하네스 지침을 유지·삭제·재검증하는 방법"
 description: "새 모델의 기본 동작을 확인하면서도 보안·검증 경계를 잃지 않도록 프롬프트, 훅, 평가 규칙을 감사하는 절차를 정리합니다."
-publishedAt: 2026-08-24
+publishedAt: 2026-07-26
 category: "ai"
 tags: ["ai-agent", "harness", "prompt-engineering", "evaluations"]
 draft: false

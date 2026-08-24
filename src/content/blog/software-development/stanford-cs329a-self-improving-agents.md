@@ -1,7 +1,7 @@
 ---
 title: "Stanford CS329A로 보는 Self-Improving AI Agent 학습 지도"
 description: "Stanford CS329A의 강의 흐름을 verifier, test-time compute, tool use, planning, eval과 orchestration을 잇는 Agent 학습 순서로 정리합니다."
-publishedAt: 2026-08-24
+publishedAt: 2025-09-22
 category: "software-development"
 tags: ["ai-agent", "llm", "evaluations", "planning", "stanford"]
 draft: false

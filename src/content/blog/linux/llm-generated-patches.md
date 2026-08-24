@@ -1,7 +1,7 @@
 ---
 title: "Linux Kernel의 LLM 생성 Patch 지침: AI 시대의 Maintainer Economics"
 description: "Linux Kernel의 tool-generated content 지침을 바탕으로, LLM 생성 patch가 maintainer의 검증 비용과 기여자 책임을 어떻게 바꾸는지 정리합니다."
-publishedAt: 2026-08-24
+publishedAt: 2026-01-20
 category: "linux"
 tags: ["linux-kernel", "open-source", "llm", "code-review", "maintainers"]
 draft: false

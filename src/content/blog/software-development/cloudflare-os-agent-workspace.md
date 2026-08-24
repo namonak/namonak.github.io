@@ -1,7 +1,7 @@
 ---
 title: "Cloudflare OS로 읽는 기업용 Agent Workspace의 구조"
 description: "Cloudflare OS의 workspace, Gadget, Gatekeeper, capability 기반 보안, 비용 제어를 통해 기업용 Agent 플랫폼의 설계 원칙을 정리합니다."
-publishedAt: 2026-08-24
+publishedAt: 2026-08-05
 category: "software-development"
 tags: ["cloudflare", "ai-agent", "security", "mcp", "cloudflare-workers"]
 draft: false

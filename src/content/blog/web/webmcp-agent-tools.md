@@ -1,7 +1,7 @@
 ---
 title: "WebMCP: 웹사이트가 Agent에게 구조화된 도구를 제공하는 방법"
 description: "WebMCP의 도구 등록 방식과 MCP·브라우저 자동화의 차이, 웹 애플리케이션에서의 보안·평가·도입 순서를 정리합니다."
-publishedAt: 2026-08-24
+publishedAt: 2025-08-13
 category: "web"
 tags: ["webmcp", "ai-agent", "mcp", "web-standards", "browser"]
 draft: false
