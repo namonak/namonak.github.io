@@ -15,6 +15,9 @@ export default defineConfig({
     processor: unified({
       remarkPlugins: [remarkGfm],
       rehypePlugins: [rehypeMermaid],
+      remarkRehype: {
+        footnoteLabel: "참고 자료",
+      },
     }),
   },
 });
