@@ -2,7 +2,7 @@
 title: "Agentic Harness 관찰성: Monitoring을 넘어 LLM·도구·평가를 하나의 요청으로 추적하기"
 description: "Agentic Harness에서 monitoring과 observability를 구분하고, OpenTelemetry trace·token·비용·eval을 운영 의사결정에 연결하는 방법을 정리합니다."
 publishedAt: 2026-08-24
-category: "software-development"
+category: "ai"
 tags: ["observability", "opentelemetry", "ai-agent", "llm", "finops", "evals"]
 draft: false
 ---
