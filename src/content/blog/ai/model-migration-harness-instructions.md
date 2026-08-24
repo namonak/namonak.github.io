@@ -9,6 +9,10 @@ draft: false
 
 > 원문: [Everyone Benchmarked Opus 5. Nobody Read the Deletion List That Shipped With It](https://medium.com/ai-all-in/everyone-benchmarked-opus-5-nobody-read-the-deletion-list-that-shipped-with-it-daa43800d4eb)
 
+## 핵심 요약
+
+모델 교체는 model ID만 바꾸는 일이 아니라, 이전 모델의 한계를 보완하려고 쌓인 하네스 규칙을 다시 평가하는 일입니다. 모델 내부의 중복 self-check나 과도한 지시는 evaluation으로 줄일 수 있지만, 테스트·권한·승인처럼 시스템이 보장해야 하는 독립 통제는 유지해야 합니다.
+
 새 모델이 출시되면 벤치마크 점수, 가격, context window부터 비교하기 쉽습니다. 하지만 실제 Agent 환경에서는 모델 교체 뒤에도 프롬프트, hook, 평가 규칙, 권한 정책이 그대로 남습니다. 이 규칙 중 일부는 이전 모델의 약점을 보완하려고 만들었을 수 있습니다.
 
 그래서 모델 교체는 model ID를 바꾸는 작업이 아니라 **하네스 규칙을 다시 검증하는 작업**으로 보는 편이 안전합니다. 이 글에서는 어떤 지침을 줄일 수 있는지와 절대 모델의 능력 향상만으로 없애면 안 되는 통제를 구분하는 절차를 정리합니다.

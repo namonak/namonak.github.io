@@ -9,6 +9,10 @@ draft: false
 
 > 원문: [Cloudflare OS: an open platform for agents, apps, and work](https://blog.cloudflare.com/cloudflare-os/)
 
+## 핵심 요약
+
+기업용 Agent platform의 핵심은 채팅 UI나 모델 연결이 아니라, 하나의 업무 단위 안에서 문맥·실행 환경·권한·결과물 공유·비용을 함께 통제하는 경계입니다. Cloudflare OS는 workspace, 격리된 앱, resource-scoped capability, 승인·감사와 비용 귀속을 분리해, Agent가 조직의 데이터와 도구를 다룰 때 무엇을 먼저 설계해야 하는지 보여 줍니다.
+
 ## 기업용 Agent는 채팅창 하나로 끝나지 않습니다
 
 사내 Agent를 도입할 때 가장 먼저 만드는 것은 보통 chat UI와 모델 연결입니다. 하지만 실제 업무는 문서·데이터베이스·GitHub·SaaS·사내 API에 걸쳐 있고, Agent가 읽은 정보를 바탕으로 새 앱이나 문서를 만들기도 합니다. 이때 "로그인한 사용자의 권한으로 Agent가 일한다"는 설명만으로는 접근 범위, 공유, 외부 쓰기, 비용을 관리하기 어렵습니다.

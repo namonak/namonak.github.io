@@ -7,6 +7,10 @@ tags: ["observability", "opentelemetry", "ai-agent", "llm", "finops", "evals"]
 draft: false
 ---
 
+## 핵심 요약
+
+Agentic Harness의 observability는 단순히 오류율과 지연 시간을 보는 일을 넘어, 하나의 요청이 모델·검색·도구·재시도·정책을 어떤 경로로 통과했는지 설명하는 능력입니다. trace에 품질 평가와 비용을 연결해야 팀이 느림·실패·비용 증가의 원인을 구분하고 실제 개선 지점을 결정할 수 있습니다.
+
 ## Agentic Harness에서 먼저 구분할 것: monitoring과 observability
 
 Agent가 고객의 질문을 받으면 모델을 호출하고, 검색·데이터베이스·사내 API 같은 도구를 선택하며, 필요하면 다시 계획을 세웁니다. 사용자는 단 하나의 답변만 보지만, 운영자는 그 뒤에서 일어난 여러 단계의 실행을 이해해야 합니다. 이 글에서는 이 실행 경로를 **Agentic Harness**라고 부르겠습니다. 즉, Agent를 감싸며 요청을 받아 모델·도구·메모리·정책·재시도를 조율하는 애플리케이션 계층입니다.

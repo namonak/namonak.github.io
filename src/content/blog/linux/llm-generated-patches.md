@@ -9,6 +9,10 @@ draft: false
 
 > 원문: [Kernel Guidelines for Tool-Generated Content](https://docs.kernel.org/process/generated-content.html)
 
+## 핵심 요약
+
+LLM이 patch 작성 비용을 낮춰도, 변경의 의도·안전성·테스트 범위를 확인하는 maintainer의 비용까지 자동으로 줄어들지는 않습니다. Linux Kernel의 지침은 AI 사용을 일괄 금지하기보다, 제출자가 결과물을 이해하고 방어하며 도구 사용과 검증 맥락을 투명하게 남겨 review 부담을 떠넘기지 않도록 요구합니다.
+
 ## 핵심은 AI 사용 여부가 아니라 검증 비용의 분배입니다
 
 LLM이 생성한 patch를 둘러싼 논의는 종종 "AI가 작성한 코드를 받아야 하는가"라는 찬반으로 흐릅니다. Linux Kernel의 최근 지침은 더 실무적인 질문을 던집니다. 제출자는 자신이 보낸 내용을 이해하고 설명할 수 있는가, 그리고 maintainer가 그 사실을 확인하는 비용은 누가 부담하는가입니다.[^kernel-generated-content]
