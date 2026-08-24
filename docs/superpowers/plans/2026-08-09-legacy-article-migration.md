@@ -221,7 +221,7 @@
 ### 2026-08-24 (월) — 2편
 
 - [x] `WP#404` · 원문 2022-12-11 · **[Review] 넥스트스텝 교육콘서트 2기 간단 후기** · [원문](https://blog.joannes.kr/memo/review-%eb%84%a5%ec%8a%a4%ed%8a%b8%ec%8a%a4%ed%85%9d-%ea%b5%90%ec%9c%a1%ec%bd%98%ec%84%9c%ed%8a%b8-2%ea%b8%b0-%ea%b0%84%eb%8b%a8-%ed%9b%84%ea%b8%b0/)
-- [ ] `WP#393` · 원문 2022-11-16 · **[Ubuntu] Python 버전 변경하는 방법** · [원문](https://blog.joannes.kr/linux/ubuntu-python-%eb%b2%84%ec%a0%84-%eb%b3%80%ea%b2%bd%ed%95%98%eb%8a%94-%eb%b0%a9%eb%b2%95/)
+- [x] `WP#393` · 원문 2022-11-16 · **[Ubuntu] Python 버전 변경하는 방법** · [원문](https://blog.joannes.kr/linux/ubuntu-python-%eb%b2%84%ec%a0%84-%eb%b3%80%ea%b2%bd%ed%95%98%eb%8a%94-%eb%b0%a9%eb%b2%95/)
 
 ### 2026-08-25 (화) — 2편
 
