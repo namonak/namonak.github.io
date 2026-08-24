@@ -52,6 +52,19 @@ describe("blog post writer skill", () => {
     );
   });
 
+  it("requires a concise narrative summary before a new post's introduction", async () => {
+    const [skill, quality] = await Promise.all([
+      readProjectFile("skills/blog-post-writer/SKILL.md"),
+      readProjectFile("skills/blog-post-writer/references/quality-gates.md"),
+    ]);
+
+    expect(skill).toContain("## 핵심 요약");
+    expect(skill).toContain("1~3개의 짧은 서술형 문단");
+    expect(skill).toContain("각 문단은 1~3문장");
+    expect(skill).toContain("원문 블록 다음");
+    expect(quality).toContain("1~3개의 짧은 서술형 문단");
+  });
+
   it("activates the repository skill for new original posts only", async () => {
     const agents = await readProjectFile("AGENTS.md");
 
