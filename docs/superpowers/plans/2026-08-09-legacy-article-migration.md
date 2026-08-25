@@ -226,7 +226,7 @@
 ### 2026-08-25 (화) — 2편
 
 - [x] `WP#390` · 원문 2022-04-29 · **[Design Patterns] Model View Controller 패턴** · [원문](https://blog.joannes.kr/design-patterns/design-patterns-model-view-controller-%ed%8c%a8%ed%84%b4/)
-- [ ] `WP#384` · 원문 2022-04-28 · **Test Driven Development(테스트 주도 개발, TDD)** · [원문](https://blog.joannes.kr/tdd/test-driven-development%ed%85%8c%ec%8a%a4%ed%8a%b8-%ec%a3%bc%eb%8f%84-%ea%b0%9c%eb%b0%9c-tdd/)
+- [x] `WP#384` · 원문 2022-04-28 · **Test Driven Development(테스트 주도 개발, TDD)** · [원문](https://blog.joannes.kr/tdd/test-driven-development%ed%85%8c%ec%8a%a4%ed%8a%b8-%ec%a3%bc%eb%8f%84-%ea%b0%9c%eb%b0%9c-tdd/)
 
 ### 2026-08-26 (수) — 2편
 
