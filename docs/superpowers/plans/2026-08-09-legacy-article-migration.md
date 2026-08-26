@@ -231,7 +231,7 @@
 ### 2026-08-26 (수) — 2편
 
 - [x] `WP#532` · 원문 2021-11-30 · **MPEG-2 TS(Transport Stream)** · [원문](https://blog.joannes.kr/mpeg/mpeg-2-ts-transport-stream/)
-- [ ] `WP#382` · 원문 2021-09-13 · **[C] 댕글링 포인터(Dangling Pointer)** · [원문](https://blog.joannes.kr/programming/c/c-%eb%8c%95%ea%b8%80%eb%a7%81-%ed%8f%ac%ec%9d%b8%ed%84%b0dangling-pointer/)
+- [x] `WP#382` · 원문 2021-09-13 · **[C] 댕글링 포인터(Dangling Pointer)** · [원문](https://blog.joannes.kr/programming/c/c-%eb%8c%95%ea%b8%80%eb%a7%81-%ed%8f%ac%ec%9d%b8%ed%84%b0dangling-pointer/)
 
 ### 2026-08-27 (목) — 2편
 
