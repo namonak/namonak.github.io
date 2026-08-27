@@ -235,7 +235,7 @@
 
 ### 2026-08-27 (목) — 2편
 
-- [ ] `WP#368` · 원문 2021-09-13 · **[C] 메모리 누수(Memory Leak)** · [원문](https://blog.joannes.kr/programming/c/c-%eb%a9%94%eb%aa%a8%eb%a6%ac-%eb%88%84%ec%88%98memory-leak/)
+- [x] `WP#368` · 원문 2021-09-13 · **[C] 메모리 누수(Memory Leak)** · [원문](https://blog.joannes.kr/programming/c/c-%eb%a9%94%eb%aa%a8%eb%a6%ac-%eb%88%84%ec%88%98memory-leak/)
 - [ ] `WP#363` · 원문 2021-09-10 · **[C] 포인터와 메모리** · [원문](https://blog.joannes.kr/programming/c/c-%ed%8f%ac%ec%9d%b8%ed%84%b0%ec%99%80-%eb%a9%94%eb%aa%a8%eb%a6%ac/)
 
 ### 2026-08-28 (금) — 2편
