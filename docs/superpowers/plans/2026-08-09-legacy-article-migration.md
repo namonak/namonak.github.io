@@ -240,7 +240,7 @@
 
 ### 2026-08-28 (금) — 2편
 
-- [ ] `WP#351` · 원문 2021-05-12 · **[Android] Kotlin을 활용한 android.os.properties 접근** · [원문](https://blog.joannes.kr/android/kotlin%ec%9d%84-%ed%99%9c%ec%9a%a9%ed%95%9c-android-os-properties-%ec%a0%91%ea%b7%bc/)
+- [x] `WP#351` · 원문 2021-05-12 · **[Android] Kotlin을 활용한 android.os.properties 접근** · [원문](https://blog.joannes.kr/android/kotlin%ec%9d%84-%ed%99%9c%ec%9a%a9%ed%95%9c-android-os-properties-%ec%a0%91%ea%b7%bc/)
 - [ ] `WP#339` · 원문 2021-03-09 · **[Android] ADB를 이용한 파일 복사(adb pull / push)** · [원문](https://blog.joannes.kr/android/android-adb%eb%a5%bc-%ec%9d%b4%ec%9a%a9%ed%95%9c-%ed%8c%8c%ec%9d%bc-%eb%b3%b5%ec%82%acadb-pull-push/)
 
 ### 2026-08-29 (토) — 4편
