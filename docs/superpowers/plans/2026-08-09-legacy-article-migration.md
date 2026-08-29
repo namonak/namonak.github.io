@@ -246,7 +246,7 @@
 ### 2026-08-29 (토) — 4편
 
 - [x] `WP#320` · 원문 2021-03-09 · **[Docker] Volume에 대한 이해와 활용** · [원문](https://blog.joannes.kr/docker/docker-volume%ec%97%90-%eb%8c%80%ed%95%9c-%ec%9d%b4%ed%95%b4%ec%99%80-%ed%99%9c%ec%9a%a9/)
-- [ ] `WP#307` · 원문 2021-03-05 · **[macOS, Big Sur] VirtualBox Kernel driver not installed (rc=-1908) 해결** · [원문](https://blog.joannes.kr/memo/macos-big-sur-virtualbox-kernel-driver-not-installed-rc-1908-%ed%95%b4%ea%b2%b0/)
+- [x] `WP#307` · 원문 2021-03-05 · **[macOS, Big Sur] VirtualBox Kernel driver not installed (rc=-1908) 해결** · [원문](https://blog.joannes.kr/memo/macos-big-sur-virtualbox-kernel-driver-not-installed-rc-1908-%ed%95%b4%ea%b2%b0/)
 - [ ] `WP#252` · 원문 2021-02-18 · **[Android] Layout Mechanism 정리** · [원문](https://blog.joannes.kr/android/android-layout-mechanism-%ec%a0%95%eb%a6%ac/)
 - [ ] `WP#247` · 원문 2020-12-06 · **[Ubuntu 16.04] VIM 8.2 설치** · [원문](https://blog.joannes.kr/linux/ubuntu-16-04-vim-8-2-%ec%84%a4%ec%b9%98/)
 
