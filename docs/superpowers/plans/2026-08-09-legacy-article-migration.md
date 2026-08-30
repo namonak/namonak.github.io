@@ -254,7 +254,7 @@
 
 - [x] `WP#566` · 원문 2020-09-30 · **[Android] TV 레이아웃 구성** · [원문](https://blog.joannes.kr/android/android-tv-%eb%a0%88%ec%9d%b4%ec%95%84%ec%9b%83-%ea%b5%ac%ec%84%b1/)
 - [x] `WP#591` · 원문 2020-09-29 · **[Android] View/ViewGroup 개념 정리** · [원문](https://blog.joannes.kr/android/android-view-layout-%ea%b0%9c%eb%85%90-%ec%a0%95%eb%a6%ac/)
-- [ ] `WP#209` · 원문 2020-09-15 · **[Kotlin] IntelliJ IDEA 설치(with 학생 인증)** · [원문](https://blog.joannes.kr/programming/kotlin/kotlin-intellij-idea-%ec%84%a4%ec%b9%98with-%ed%95%99%ec%83%9d-%ec%9d%b8%ec%a6%9d/)
+- [x] `WP#209` · 원문 2020-09-15 · **[Kotlin] IntelliJ IDEA 설치(with 학생 인증)** · [원문](https://blog.joannes.kr/programming/kotlin/kotlin-intellij-idea-%ec%84%a4%ec%b9%98with-%ed%95%99%ec%83%9d-%ec%9d%b8%ec%a6%9d/)
 - [ ] `WP#206` · 원문 2020-09-11 · **[Android] 외부저장소에 파일 Read/Write 시에 발생하는 Permission denied 해결 방법** · [원문](https://blog.joannes.kr/android/android-%ec%99%b8%eb%b6%80%ec%a0%80%ec%9e%a5%ec%86%8c%ec%97%90-%ed%8c%8c%ec%9d%bc-read-write-%ec%8b%9c%ec%97%90-%eb%b0%9c%ec%83%9d%ed%95%98%eb%8a%94-permission-denied-%ed%95%b4%ea%b2%b0/)
 
 ### 2026-08-31 (월) — 2편
