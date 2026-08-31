@@ -259,7 +259,7 @@
 
 ### 2026-08-31 (월) — 2편
 
-- [ ] `WP#202` · 원문 2020-09-11 · **[Android] 안드로이드 스튜디오 waiting for target device to come online 무한 로딩 해결 방법** · [원문](https://blog.joannes.kr/android/android-%ec%95%88%eb%93%9c%eb%a1%9c%ec%9d%b4%eb%93%9c-%ec%8a%a4%ed%8a%9c%eb%94%94%ec%98%a4-waiting-for-target-device-to-come-online-%eb%ac%b4%ed%95%9c-%eb%a1%9c%eb%94%a9-%ed%95%b4%ea%b2%b0/)
+- [x] `WP#202` · 원문 2020-09-11 · **[Android] 안드로이드 스튜디오 waiting for target device to come online 무한 로딩 해결 방법** · [원문](https://blog.joannes.kr/android/android-%ec%95%88%eb%93%9c%eb%a1%9c%ec%9d%b4%eb%93%9c-%ec%8a%a4%ed%8a%9c%eb%94%94%ec%98%a4-waiting-for-target-device-to-come-online-%eb%ac%b4%ed%95%9c-%eb%a1%9c%eb%94%a9-%ed%95%b4%ea%b2%b0/)
 - [ ] `WP#147` · 원문 2020-08-21 · **[Ubuntu 16.04] 고정 IP 설정** · [원문](https://blog.joannes.kr/linux/ubuntu-16-04-%ea%b3%a0%ec%a0%95-ip-%ec%84%a4%ec%a0%95/)
 
 ### 2026-09-01 (화) — 2편
