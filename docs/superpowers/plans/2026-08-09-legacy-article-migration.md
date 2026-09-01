@@ -264,7 +264,7 @@
 
 ### 2026-09-01 (화) — 2편
 
-- [ ] `WP#165` · 원문 2020-08-21 · **[C] 구조체 정렬(메모리 패딩)** · [원문](https://blog.joannes.kr/programming/c/c%ec%96%b8%ec%96%b4-%ea%b5%ac%ec%a1%b0%ec%b2%b4-%ec%a0%95%eb%a0%ac-%eb%a9%94%eb%aa%a8%eb%a6%ac-%ed%8c%a8%eb%94%a9-memory-padding/)
+- [x] `WP#165` · 원문 2020-08-21 · **[C] 구조체 정렬(메모리 패딩)** · [원문](https://blog.joannes.kr/programming/c/c%ec%96%b8%ec%96%b4-%ea%b5%ac%ec%a1%b0%ec%b2%b4-%ec%a0%95%eb%a0%ac-%eb%a9%94%eb%aa%a8%eb%a6%ac-%ed%8c%a8%eb%94%a9-memory-padding/)
 - [ ] `WP#174` · 원문 2020-08-21 · **[Linux] tmux 설치 방법** · [원문](https://blog.joannes.kr/linux/tmux-%ec%84%a4%ec%b9%98-%eb%b0%a9%eb%b2%95/)
 
 ### 2026-09-02 (수) — 2편
