@@ -25,7 +25,7 @@ describe("blog post writer skill", () => {
     expect(skill).toContain("글을 쓰기 전에");
     expect(skill).toContain("각 항목을 1차 출처와 연결합니다.");
     expect(skill).toContain("검증을 마친 뒤에만");
-    expect(skill).toContain(
+    expect(skill).not.toContain(
       "정확한 frontmatter를 사용하고 `draft: true`를 명시합니다.",
     );
     expect(voice).toContain("개발자");
