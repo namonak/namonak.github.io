@@ -270,7 +270,7 @@
 ### 2026-09-02 (수) — 2편
 
 - [x] `WP#152` · 원문 2020-08-20 · **[Docker] macOS에서 설치하는 방법** · [원문](https://blog.joannes.kr/docker/docker-macos%ec%97%90%ec%84%9c-%ec%84%a4%ec%b9%98%ed%95%98%eb%8a%94-%eb%b0%a9%eb%b2%95/)
-- [ ] `WP#142` · 원문 2020-08-11 · **[Linux] gcc -E 옵션** · [원문](https://blog.joannes.kr/linux/linux-gcc-e-opt/)
+- [x] `WP#142` · 원문 2020-08-11 · **[Linux] gcc -E 옵션** · [원문](https://blog.joannes.kr/linux/linux-gcc-e-opt/)
 
 ### 2026-09-03 (목) — 2편
 
