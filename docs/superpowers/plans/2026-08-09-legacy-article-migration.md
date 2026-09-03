@@ -279,7 +279,7 @@
 
 ### 2026-09-04 (금) — 2편
 
-- [ ] `WP#51` · 원문 2020-04-29 · **[bash] 경과시간 출력하기** · [원문](https://blog.joannes.kr/linux/bash-%ea%b2%bd%ea%b3%bc%ec%8b%9c%ea%b0%84-%ec%b6%9c%eb%a0%a5%ed%95%98%ea%b8%b0/)
+- [x] `WP#51` · 원문 2020-04-29 · **[bash] 경과시간 출력하기** · [원문](https://blog.joannes.kr/linux/bash-%ea%b2%bd%ea%b3%bc%ec%8b%9c%ea%b0%84-%ec%b6%9c%eb%a0%a5%ed%95%98%ea%b8%b0/)
 - [ ] `WP#47` · 원문 2020-04-05 · **make 컴파일 에러시 쉘 스크립트 중단** · [원문](https://blog.joannes.kr/linux/make-%ec%bb%b4%ed%8c%8c%ec%9d%bc-%ec%97%90%eb%9f%ac%ec%8b%9c-%ec%89%98-%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-%ec%a4%91%eb%8b%a8/)
 
 ### 2026-09-05 (토) — 4편
