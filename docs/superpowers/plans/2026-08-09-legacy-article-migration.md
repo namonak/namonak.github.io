@@ -274,7 +274,7 @@
 
 ### 2026-09-03 (목) — 2편
 
-- [ ] `WP#85` · 원문 2020-08-10 · **[Linux] Process Address** · [원문](https://blog.joannes.kr/linux/linux-process-address/)
+- [x] `WP#85` · 원문 2020-08-10 · **[Linux] Process Address** · [원문](https://blog.joannes.kr/linux/linux-process-address/)
 - [ ] `WP#81` · 원문 2020-08-09 · **[Ubuntu 16.04] DNS 설정** · [원문](https://blog.joannes.kr/linux/ubuntu-16-04-dns-setting/)
 
 ### 2026-09-04 (금) — 2편
