@@ -287,7 +287,7 @@
 - [x] `WP#35` · 원문 2019-08-26 · **[Synology NAS] 리다이렉트(redirect) 설정** · [원문](https://blog.joannes.kr/memo/synology-nas-%eb%a6%ac%eb%8b%a4%ec%9d%b4%eb%a0%89%ed%8a%b8redirect-%ec%84%a4%ec%a0%95/)
 - [x] `WP#930` · 원문 2018-05-18 · **OSTEP 09. Lottery Scheduling** · [원문](https://blog.joannes.kr/operating-system/ostep-09-lottery-scheduling/)
 - [x] `WP#914` · 원문 2018-05-15 · **OSTEP 08. Multi-level Feedback** · [원문](https://blog.joannes.kr/operating-system/ostep-08-multi-level-feedback/)
-- [ ] `WP#897` · 원문 2018-05-14 · **OSTEP 06. Direct Execution** · [원문](https://blog.joannes.kr/operating-system/ostep-06-direct-execution/)
+- [x] `WP#897` · 원문 2018-05-14 · **OSTEP 06. Direct Execution** · [원문](https://blog.joannes.kr/operating-system/ostep-06-direct-execution/)
 
 ### 2026-09-06 (일) — 2편
 
