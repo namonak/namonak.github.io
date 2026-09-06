@@ -291,5 +291,5 @@
 
 ### 2026-09-06 (일) — 2편
 
-- [ ] `WP#890` · 원문 2018-05-13 · **OSTEP 05. Process API** · [원문](https://blog.joannes.kr/operating-system/ostep-05-process-api/)
+- [x] `WP#890` · 원문 2018-05-13 · **OSTEP 05. Process API** · [원문](https://blog.joannes.kr/operating-system/ostep-05-process-api/)
 - [ ] `WP#879` · 원문 2018-05-13 · **OSTEP 04. Processes** · [원문](https://blog.joannes.kr/operating-system/os-processes/)
