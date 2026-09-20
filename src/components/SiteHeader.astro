@@ -1,21 +1,11 @@
----
-const navigation = [
-  { href: "/", label: "글" },
-  { href: "/categories/", label: "카테고리" },
-  { href: "/about/", label: "소개" },
-];
----
-
 <header class="site-header">
   <div class="page-shell header-inner">
     <a class="brand" href="/">namonak.dev</a>
     <nav aria-label="주요 탐색">
       <ul>
-        {
-          navigation.map((item) => (
-            <li><a href={item.href}>{item.label}</a></li>
-          ))
-        }
+        <li><a href="/">글</a></li>
+        <li><a href="/categories/">카테고리</a></li>
+        <li><a href="/about/">소개</a></li>
       </ul>
     </nav>
   </div>
