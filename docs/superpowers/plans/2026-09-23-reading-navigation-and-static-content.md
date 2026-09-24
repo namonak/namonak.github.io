@@ -37,17 +37,19 @@ Co-authored-by: Codex (AI-generated) <codex@namonak.dev>
 **Files:**
 
 - Create: `tests/static-content-body.test.ts`
+- Create: `scripts/validate-content-bodies.mjs`
+- Modify: `package.json`
 - Modify: `src/content.config.ts` 또는 정적 렌더링 경계에서 원인이 확인된 파일
 - Modify: `src/pages/[...slug].astro` (정적 `render()` 입력 또는 출력 경계가 원인일 때만)
 
 **Interfaces:**
 
 - Consumes: `src/content/blog/<category>/<slug>.md`의 frontmatter와 본문
-- Produces: `dist/<category>/<slug>/index.html` 안의 비어 있지 않은 `.prose`
+- Produces: 본문이 비어 있으면 실패하는 콘텐츠 검증과, `dist/<category>/<slug>/index.html` 안의 비어 있지 않은 `.prose`
 
-- [ ] **Step 1: 실패하는 정적 본문 테스트를 작성한다.**
+- [ ] **Step 1: 본문이 있는 글과 빈 글을 모두 다루는 실패 테스트를 작성한다.**
 
-`tests/static-content-body.test.ts`에서 고유한 본문 문구를 가진 임시 공개 Markdown을 `src/content/blog/test-static-body/fixture.md`에 만들고, `npm run build` 후 생성된 HTML에 그 문구가 있는지 검사한다. `finally`에서 정확히 그 파일과 빈 디렉터리만 제거한다.
+`tests/static-content-body.test.ts`에서 고유한 본문 문구를 가진 임시 공개 Markdown과 본문이 빈 임시 공개 Markdown을 각각 만든다. 빈 글은 `npm run validate:content`가 해당 파일 경로와 함께 실패해야 하며, 본문이 있는 글은 검증과 `npm run build` 뒤 생성된 HTML의 `.prose`에 고유 문구가 있어야 한다. `finally`에서는 정확히 두 fixture 파일과 빈 디렉터리만 제거한다.
 
 ```ts
 const fixturePath = join(
@@ -55,14 +57,35 @@ const fixturePath = join(
   "src/content/blog/test-static-body/fixture.md",
 );
 const fixtureText = "정적 본문 회귀 검증 문구";
+const emptyFixturePath = join(
+  process.cwd(),
+  "src/content/blog/test-static-body/empty-fixture.md",
+);
 
 await mkdir(dirname(fixturePath), { recursive: true });
 await writeFile(
   fixturePath,
   `---\ntitle: "정적 본문 검증"\ndescription: "정적 산출물 검증용 글입니다."\npublishedAt: 2026-09-23\ncategory: "test-static-body"\ntags: []\n---\n\n${fixtureText}\n`,
 );
+await writeFile(
+  emptyFixturePath,
+  `---\ntitle: "빈 본문 검증"\ndescription: "본문 누락 검증용 글입니다."\npublishedAt: 2026-09-23\ncategory: "test-static-body"\ntags: []\n---\n`,
+);
 
 try {
+  const emptyResult = spawnSync("npm", ["run", "validate:content"], {
+    cwd: process.cwd(),
+    encoding: "utf8",
+  });
+  expect(emptyResult.status).toBe(1);
+  expect(emptyResult.stderr).toContain("empty-fixture.md");
+  await rm(emptyFixturePath);
+
+  const validationResult = spawnSync("npm", ["run", "validate:content"], {
+    cwd: process.cwd(),
+    encoding: "utf8",
+  });
+  expect(validationResult.status, validationResult.stderr).toBe(0);
   const result = spawnSync("npm", ["run", "build"], {
     cwd: process.cwd(),
     encoding: "utf8",
@@ -75,15 +98,16 @@ try {
   expect(html).toContain(fixtureText);
 } finally {
   await rm(fixturePath, { force: true });
+  await rm(emptyFixturePath, { force: true });
   await rmdir(dirname(fixturePath));
 }
 ```
 
-- [ ] **Step 2: 테스트를 단독 실행해 현재 실패를 기록한다.**
+- [ ] **Step 2: 빈 본문 검증이 없는 현재 상태의 실패를 기록한다.**
 
 Run: `npx vitest run tests/static-content-body.test.ts`
 
-Expected: `dist/test-static-body/fixture/index.html`에 `정적 본문 회귀 검증 문구`가 없으면 실패한다.
+Expected: 빈 fixture가 존재할 때는 `validate:content` 명령이 아직 없거나 빈 본문을 허용하므로 테스트가 실패한다.
 
 - [ ] **Step 3: 수집·렌더링 경계를 비교한다.**
 
@@ -94,22 +118,22 @@ const posts = getPublishedPosts(await getCollection("blog"));
 const { Content } = await render(post);
 ```
 
-- [ ] **Step 4: 본문이 사라지는 경계만 최소 수정한다.**
+- [ ] **Step 4: 빈 공개 Markdown을 거부하는 검증을 최소로 추가하고, 렌더링 경계만 필요할 때 수정한다.**
 
-수집 단계에서 본문이 비면 loader 설정을, `render(post)` 뒤에 비면 정적 경로의 entry 전달을 고친다. 테스트 fixture의 `body`가 `Content`에 전달돼 정적 HTML의 `.prose`에 문구가 남는 변경만 허용한다.
+`scripts/validate-content-bodies.mjs`는 frontmatter 뒤의 Markdown 본문을 검사해 공백뿐인 공개 글의 파일 경로를 표준 오류로 출력하고 종료 상태 1을 반환한다. `package.json`에 `validate:content` 스크립트를 추가하고, `prebuild`에서 이를 실행해 수동 빌드와 CI 빌드 모두를 막는다. 수집 단계에서 본문이 비거나 `render(post)` 뒤에 본문이 빠지는 것이 관찰된 경우에만 loader 또는 정적 경로의 entry 전달을 수정한다. 본문 fixture의 문구가 `Content`를 거쳐 정적 HTML의 `.prose`에 남는 변경만 허용한다.
 
 - [ ] **Step 5: 회귀 테스트와 Mermaid 검증을 통과시킨다.**
 
 Run: `npx vitest run tests/static-content-body.test.ts tests/mermaid-validation.test.ts`
 
-Expected: 임시 본문 문구가 `dist`에 있고, 잘못된 Mermaid fixture는 계속 실패하며 공개 Mermaid 글은 통과한다.
+Expected: 빈 fixture는 콘텐츠 검증에서 실패하고, 임시 본문 문구는 `dist`에 있으며, 잘못된 Mermaid fixture는 계속 실패하고 공개 Mermaid 글은 통과한다.
 
 - [ ] **Step 6: 독립 커밋을 만든다.**
 
 ```bash
-git add src/content.config.ts src/pages/[...slug].astro tests/static-content-body.test.ts
-git commit -S -m "fix(content): 정적 본문 렌더링을 검증한다" \
-  -m "임시 Markdown 글의 본문이 정적 산출물에 포함되는 회귀 검증을 추가한다." \
+git add package.json scripts/validate-content-bodies.mjs src/content.config.ts src/pages/[...slug].astro tests/static-content-body.test.ts
+git commit -S -m "fix(content): 빈 본문 글을 검증한다" \
+  -m "빈 공개 Markdown을 빌드 전에 거부하고 정적 본문 렌더링을 회귀 검증한다." \
   -m "Co-authored-by: Codex (AI-generated) <codex@namonak.dev>"
 ```
 
