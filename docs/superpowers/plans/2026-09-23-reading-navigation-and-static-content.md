@@ -222,20 +222,22 @@ git commit -S -m "feat(홈): 최근 글과 주제 탐색을 정리한다" \
 - Consumes: `tags: string[]`
 - Produces: `/tags/${encodeURIComponent(tag)}/`를 가리키는 카드 태그 링크
 
-- [ ] **Step 1: 태그 링크 기대값을 추가한다.**
+- [ ] **Step 1: 최신 12개 범위 안에 한국어 태그 fixture를 만들고 링크 기대값을 추가한다.**
 
-`tests/home-navigation.test.ts`에서 한국어 태그와 영문 태그의 홈 HTML 링크를 확인한다.
+`tests/home-navigation.test.ts`는 빌드 전에 `src/content/blog/test-home-navigation/korean-tag.md` fixture를 만든다. fixture에는 다른 공개 글보다 최신인 `publishedAt: 2099-01-01`, `category: "test-home-navigation"`, 태그 `ai-agent`와 `우선순위큐`, 고유 본문을 둔다. 따라서 홈이 최신 12개로 제한돼도 두 태그가 항상 카드에 포함된다. `finally`에서 fixture 파일과 빈 디렉터리만 제거한 뒤, 한국어 태그와 영문 태그의 홈 HTML 링크를 확인한다.
 
 ```ts
 expect(homeHtml).toContain('href="/tags/ai-agent/"');
-expect(homeHtml).toContain('href="/tags/%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84%ED%81%90/"');
+expect(homeHtml).toContain(
+  'href="/tags/%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84%ED%81%90/"',
+);
 ```
 
 - [ ] **Step 2: 실패를 확인한다.**
 
 Run: `npx vitest run tests/home-navigation.test.ts`
 
-Expected: 카드 태그가 텍스트만 렌더링하므로 링크 기대값이 실패한다.
+Expected: 최신 fixture의 카드 태그가 텍스트만 렌더링되므로 두 링크 기대값이 실패한다. 기존 `우선순위큐` 글이 최신 12개 밖에 있다는 이유만으로 실패해서는 안 된다.
 
 - [ ] **Step 3: 카드 태그를 기존 태그 경로에 연결한다.**
 
@@ -249,7 +251,7 @@ Expected: 카드 태그가 텍스트만 렌더링하므로 링크 기대값이 �
 
 Run: `npx vitest run tests/home-navigation.test.ts tests/korean-tag-build.test.ts`
 
-Expected: 홈 카드 태그가 올바른 URL을 갖고 기존 한국어 태그 정적 경로도 계속 빌드된다.
+Expected: 최신 fixture의 홈 카드 태그가 올바른 URL을 갖고, fixture를 정리한 뒤에도 기존 한국어 태그 정적 경로가 계속 빌드된다.
 
 - [ ] **Step 5: 독립 커밋을 만든다.**
 
