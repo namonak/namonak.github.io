@@ -16,6 +16,7 @@
 - 새 의존성, 검색, 자동 RSS, 페이지네이션, 새 전체 아카이브 경로를 추가하지 않는다.
 - Mermaid는 계속 빌드 시 SVG로 렌더링하고, 잘못된 Mermaid는 검증 또는 빌드를 실패시킨다.
 - Markdown 글의 문구·frontmatter는 수정하지 않는다.
+- `dist/`를 생성하거나 임시 Markdown fixture를 쓰는 Vitest 파일은 서로 병렬 실행하지 않는다.
 - 모든 제품 커밋은 서명하고, Angular 형식의 한글 제목과 아래 트레일러를 사용한다.
 
 ```text
@@ -137,6 +138,51 @@ git commit -S -m "fix(content): 빈 본문 글을 검증한다" \
   -m "Co-authored-by: Codex (AI-generated) <codex@namonak.dev>"
 ```
 
+### Task 1.5: 정적 빌드 테스트의 공유 산출물을 직렬화한다
+
+**Files:**
+
+- Create: `vitest.config.ts`
+- Modify: `tests/home-navigation.test.ts`
+
+**Interfaces:**
+
+- Consumes: `dist/`와 임시 Markdown fixture를 쓰는 정적 테스트 파일
+- Produces: 각 테스트가 자신이 생성한 정적 산출물만 읽는 직렬 실행
+
+- [ ] **Step 1: 정적 빌드 테스트 파일을 직렬 실행하도록 설정한다.**
+
+`vitest.config.ts`를 추가해 `fileParallelism: false`를 설정한다. `tests/static-content-body.test.ts`, `tests/home-navigation.test.ts`, 기존 `tests/korean-tag-build.test.ts`는 모두 `dist/`를 지우고 다시 만드는 `npm run build`를 실행하므로, 파일 단위 병렬 실행을 허용하면 서로의 fixture와 산출물을 덮어쓸 수 있다.
+
+```ts
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  test: {
+    fileParallelism: false,
+  },
+});
+```
+
+- [ ] **Step 2: 홈 테스트가 자체 빌드 산출물만 읽게 한다.**
+
+`tests/home-navigation.test.ts`에서 `dist/index.html`을 읽기 전에 `npm run build`를 실행하고 종료 상태 0을 확인한다. 따라서 깨끗한 checkout에서 테스트가 먼저 실행돼도 이전 `dist`를 읽지 않는다.
+
+- [ ] **Step 3: 정적 빌드 테스트를 함께 실행한다.**
+
+Run: `npx vitest run tests/static-content-body.test.ts tests/home-navigation.test.ts tests/korean-tag-build.test.ts`
+
+Expected: 세 테스트 파일이 순서대로 빌드하고, fixture와 `dist`를 서로 덮어쓰지 않으며 모두 통과한다.
+
+- [ ] **Step 4: 독립 커밋을 만든다.**
+
+```bash
+git add vitest.config.ts tests/home-navigation.test.ts
+git commit -S -m "test(정적): 빌드 산출물 검증을 직렬화한다" \
+  -m "공유 dist와 임시 Markdown fixture를 쓰는 테스트 파일의 실행 순서를 보장한다." \
+  -m "Co-authored-by: Codex (AI-generated) <codex@namonak.dev>"
+```
+
 ### Task 2: 홈의 최신 글 범위와 주제 탐색을 연결한다
 
 **Files:**
@@ -189,9 +235,16 @@ export function getRecentPosts<T>(posts: readonly T[], limit: number): T[] {
 
 - [ ] **Step 5: 정적 홈 탐색 테스트를 작성하고 실행한다.**
 
-`tests/home-navigation.test.ts`는 빌드 뒤 `dist/index.html`을 읽어 다음을 확인한다.
+`tests/home-navigation.test.ts`는 테스트 안에서 `npm run build`를 실행해 성공을 확인한 뒤 `dist/index.html`을 읽는다. 테스트가 기존 `dist`나 다른 테스트의 산출물에 의존하지 않게 한다.
 
 ```ts
+const result = spawnSync("npm", ["run", "build"], {
+  cwd: process.cwd(),
+  encoding: "utf8",
+});
+expect(result.status, result.stderr).toBe(0);
+const homeHtml = readFileSync(join(process.cwd(), "dist/index.html"), "utf8");
+
 expect(homeHtml.match(/class="post-card"/g)).toHaveLength(12);
 expect(homeHtml).toContain('href="/categories/"');
 expect(homeHtml).toContain('href="/categories/ai/"');
@@ -199,7 +252,7 @@ expect(homeHtml).toContain('href="/categories/ai/"');
 
 Run: `npx vitest run tests/posts.test.ts tests/home-navigation.test.ts`
 
-Expected: 홈에 12개 카드와 카테고리 링크가 생성된다.
+Expected: 직렬화된 자체 빌드 산출물에 홈의 12개 카드와 카테고리 링크가 생성된다.
 
 - [ ] **Step 6: 독립 커밋을 만든다.**
 
@@ -251,7 +304,7 @@ Expected: 최신 fixture의 카드 태그가 텍스트만 렌더링되므로 두
 
 Run: `npx vitest run tests/home-navigation.test.ts tests/korean-tag-build.test.ts`
 
-Expected: 최신 fixture의 홈 카드 태그가 올바른 URL을 갖고, fixture를 정리한 뒤에도 기존 한국어 태그 정적 경로가 계속 빌드된다.
+Expected: 최신 fixture의 홈 카드 태그가 올바른 URL을 갖고, fixture를 정리한 뒤에도 기존 한국어 태그 정적 경로가 계속 빌드된다. `vitest.config.ts`의 직렬 실행 설정 때문에 다른 정적 빌드 테스트와 `dist`를 동시에 쓰지 않는다.
 
 - [ ] **Step 5: 독립 커밋을 만든다.**
 
